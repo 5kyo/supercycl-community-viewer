@@ -2,11 +2,37 @@
 
 Supercycl × YouthMeta 커뮤니티 관리자 대시보드의 조회 전용 데스크톱 웹 목업입니다.
 
-[목업 열기](https://5kyo.github.io/supercycl-community-viewer/)
+[목업 열기](https://5kyo.github.io/supercycl-community-viewer/) · [GitHub 저장소](https://github.com/5kyo/supercycl-community-viewer)
+
+## 독립 프로젝트로 작업하기
+
+기본 작업 폴더는 `Projects/Supercycl-Community-Viewer/`입니다. Codex나 편집기에서 이 폴더를 프로젝트로 열면 됩니다. Supercycl Mobile과 별도 Git 저장소이며, 빌드 도구나 환경 변수 설치 없이 실행됩니다.
+
+```text
+Supercycl-Community-Viewer/
+├── index.html                 # 화면·스타일·동작·가상 데이터·로고
+├── README.md                  # 실행·검증·배포 안내
+├── AGENTS.md                  # 공통 에이전트 작업 지침
+├── CLAUDE.md                  # Claude용 작업 지침 진입점
+├── docs/
+│   └── PROJECT_CONTEXT.md     # 목적·구현 범위·결정 사항·정책 참조
+├── .gitignore
+└── .nojekyll                  # GitHub Pages 정적 게시 설정
+```
+
+`index.html`이 수정 원본입니다. 데스크톱의 `슈퍼사이클_커뮤니티_뷰어_목업.html`은 공유용 복사본으로 관리합니다. 정책 참고 위치와 이전 작업의 맥락은 [프로젝트 컨텍스트](docs/PROJECT_CONTEXT.md)에 정리되어 있습니다.
 
 ## 사용 방법
 
 페이지에서 **로그인하고 둘러보기**를 누르면 바로 시연할 수 있습니다. 별도 계정이나 설치가 필요하지 않습니다. 내려받은 `index.html`을 브라우저에서 직접 열어도 동작합니다.
+
+프로젝트 폴더에서 로컬 서버로 확인하려면 다음 명령을 실행하고 `http://localhost:4173`을 엽니다. Python 3만 필요하며 종료는 `Ctrl+C`입니다.
+
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1
+```
+
+## 현재 기능
 
 - 상단 채널 버튼으로 문샷 서클·알파 스쿼드 전환
 - 미실현 손익, 기간별 실현 성과, 멤버 연동 현황 조회
@@ -31,6 +57,30 @@ HTML·CSS·JavaScript와 로고가 `index.html` 하나에 포함되어 있습니
 
 신고는 1건씩, 제재는 조치 1건씩 표시합니다. 적용 중 대상 인원은 선택 채널 관련 기록에서 중복 대상을 한 번만 세며, 커뮤니티 전체 제한 등은 각 기록에 적용 범위를 별도로 표기합니다. 현재 채널의 멤버 명단과 과거 운영 기록의 대상은 다를 수 있습니다.
 
-## 게시
+## 수정 후 확인
+
+`git diff --check`로 공백 오류를 확인합니다. 화면이나 스크립트를 변경했다면 브라우저에서 시연 로그인, 두 채널 전환, 변경한 메뉴와 상세 화면, 로그아웃을 확인합니다. 신고·제재 화면을 바꿀 때는 검색·필터와 관련 기록 이동도 확인합니다.
+
+현재 별도 빌드·패키지 설치·테스트 러너는 없습니다. Supercycl Mobile의 생성기나 검증 명령을 이 저장소에서 실행하지 않습니다.
+
+## Git과 게시
 
 GitHub Pages가 `main` 브랜치의 루트(`/`)를 게시합니다. `index.html` 변경을 커밋하고 푸시하면 새 내용이 반영됩니다. `.nojekyll`은 정적 HTML을 그대로 게시하기 위한 파일입니다.
+
+```sh
+git status --short
+git fetch origin main
+git log --oneline origin/main..HEAD
+git push origin main
+gh run list --repo 5kyo/supercycl-community-viewer --limit 3
+```
+
+작업 전에 원격 변경을 확인하고, 검증한 파일을 커밋한 뒤 푸시합니다. 위 명령의 `origin`은 `https://github.com/5kyo/supercycl-community-viewer.git`이어야 합니다. 이 저장소는 `main`에 게시하며 Supercycl Mobile의 `dev`·릴리스 흐름과 별도로 운영합니다.
+
+저장소 소유 계정은 `5kyo`입니다. `gh auth status`와 저장소 쓰기 권한을 확인하고, 사용자가 선택한 GitHub 활성 계정은 유지합니다. 다른 계정의 인증이 필요하면 해당 게시 명령에만 적용하고 인증 값을 파일·로그·Git에 저장하지 않습니다.
+
+배포 후 [GitHub Actions](https://github.com/5kyo/supercycl-community-viewer/actions)의 Pages 작업 성공과 실제 사이트 반영을 확인합니다. 데스크톱 공유본도 갱신할 때는 프로젝트 루트에서 아래 명령을 실행합니다.
+
+```sh
+cp index.html ~/Desktop/슈퍼사이클_커뮤니티_뷰어_목업.html
+```
