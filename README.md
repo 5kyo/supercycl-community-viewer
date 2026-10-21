@@ -20,7 +20,7 @@ Supercycl-Community-Viewer/
 └── .nojekyll                  # GitHub Pages 정적 게시 설정
 ```
 
-`index.html`이 수정 원본입니다. 데스크톱의 `슈퍼사이클_커뮤니티_뷰어_목업.html`은 공유용 복사본으로 관리합니다. 정책 참고 위치와 이전 작업의 맥락은 [프로젝트 컨텍스트](docs/PROJECT_CONTEXT.md)에 정리되어 있습니다.
+`index.html`이 수정 원본입니다. 프로젝트 원본과 GitHub Pages 배포본을 관리하며, 기존 데스크톱 HTML 복사본은 정기 갱신하지 않습니다. 정책 참고 위치와 이전 작업의 맥락은 [프로젝트 컨텍스트](docs/PROJECT_CONTEXT.md)에 정리되어 있습니다.
 
 ## 사용 방법
 
@@ -82,8 +82,4 @@ gh run list --repo 5kyo/supercycl-community-viewer --limit 3
 
 저장소 소유 계정은 `5kyo`입니다. `gh auth status`와 저장소 쓰기 권한을 확인하고, 사용자가 선택한 GitHub 활성 계정은 유지합니다. 다른 계정의 인증이 필요하면 해당 게시 명령에만 적용하고 인증 값을 파일·로그·Git에 저장하지 않습니다.
 
-배포 후 [GitHub Actions](https://github.com/5kyo/supercycl-community-viewer/actions)의 Pages 작업 성공과 실제 사이트 반영을 확인합니다. 데스크톱 공유본도 갱신할 때는 프로젝트 루트에서 아래 명령을 실행합니다.
-
-```sh
-cp index.html ~/Desktop/슈퍼사이클_커뮤니티_뷰어_목업.html
-```
+배포 후 [GitHub Actions](https://github.com/5kyo/supercycl-community-viewer/actions)의 Pages 작업 성공과 실제 사이트 반영을 확인합니다. 데스크톱 HTML 복사본은 사용자가 별도로 요청할 때만 갱신합니다.
