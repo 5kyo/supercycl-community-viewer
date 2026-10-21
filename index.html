@@ -33,6 +33,16 @@ dialog{padding:0;border:0;color:var(--ink);background:white;box-shadow:0 20px 80
 @media(max-width:1100px){.channel-picker{flex-direction:column;align-items:stretch;gap:14px}.channel-picker-heading{min-width:0}.channel-options{width:100%}}
 @media(max-width:600px){.channel-options{grid-template-columns:1fr;gap:9px}.channel-card{min-height:70px}.channel-picker{padding:15px}.channel-picker-heading p{line-height:1.6}.heading-controls{width:auto}}
 @media print{.channel-picker{display:none}}
+
+/* Read-only moderation review proposal. */
+.operations-nav-label{margin-top:20px;margin-bottom:4px;padding-top:16px;border-top:1px solid #344139}.sidebar{overflow-y:auto}.sidebar .side-space{min-height:22px}.sidebar .viewer-note,.sidebar .profile{flex-shrink:0}
+.operations-overview{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:-4px 0 25px}.operations-link{display:flex;align-items:center;gap:15px;padding:18px 21px;text-align:left;border:1px solid var(--line);border-radius:11px;background:var(--paper);min-width:0}.operations-link:hover{border-color:#9bb49a;background:#fafcf7}.operations-icon{width:37px;height:37px;border-radius:10px;display:grid;place-items:center;background:var(--amber-soft);color:var(--amber);flex-shrink:0}.operations-icon.shield{background:#edf0f5;color:#63758a}.operations-title{display:block;font-size:13px;font-weight:650}.operations-caption{display:block;margin-top:6px;font-size:11px;color:var(--muted);line-height:1.6}.operations-link .operations-value{margin-left:auto;font-size:23px;font-weight:600;white-space:nowrap}.operations-value small{font-size:11px;margin-left:3px;font-weight:400;color:var(--muted)}.operations-link>.icon{color:#899780;width:16px}
+.moderation-notice{display:flex;align-items:center;gap:12px;margin-bottom:20px;color:#7e7159;font-size:11px;line-height:1.8}.moderation-notice p{max-width:80ch}.moderation-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:21px}.moderation-stat{padding:22px 23px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}.moderation-stat-label{font-size:12px;color:#637266;display:flex;align-items:center;gap:8px}.moderation-stat-label svg{width:16px;height:16px}.moderation-stat-number{font-size:31px;letter-spacing:-.04em;font-weight:600;margin-top:16px}.moderation-stat-number small{font-size:12px;color:var(--muted);font-weight:400;margin-left:5px}.moderation-stat p{margin-top:10px;font-size:11px;line-height:1.7;color:var(--muted)}.moderation-stats .emphasis{background:#fcf8f0;border-color:#e9ddc2}.moderation-stats .emphasis .moderation-stat-number{color:var(--amber)}
+.moderation-tools .search{max-width:320px}.moderation-tools .filter-group{flex-wrap:wrap}.moderation-tools .select{max-width:200px}.moderation-tools .button{height:35px;font-size:11px}.moderation-table{min-width:790px;font-size:12px}.moderation-table th{font-size:11px}.moderation-table td{height:76px;max-width:220px;line-height:1.6}.moderation-table .record-id{font-size:11px;font-weight:650;color:#536b55}.moderation-table .record-date,.record-secondary{display:block;margin-top:5px;font-size:10px;font-weight:400;color:#6e7d71}.record-person{font-weight:600;color:#304637}.record-outcome{font-size:11px;color:#637368;max-width:210px}.record-detail-button{font-size:11px;color:var(--green);display:flex;align-items:center;gap:5px;white-space:nowrap;padding:7px 0}.record-detail-button:hover{text-decoration:underline;text-underline-offset:3px}.record-detail-button svg{width:13px;height:13px}.pill.blue{background:#edf2f8;color:#476b90}.moderation-table tbody tr:hover{background:#fafcf8}
+.moderation-policy{display:grid;grid-template-columns:1fr 1fr;gap:21px;padding:20px 22px;margin-top:17px;background:#edf2e9;border:1px solid #e1e7db;border-radius:11px;font-size:11px;color:#63755e;line-height:1.85}.moderation-policy strong{font-size:12px;display:block;color:#485f42;margin-bottom:5px}.moderation-detail-kicker{font-size:11px;color:var(--muted);margin-bottom:12px}.moderation-person{font-size:24px;letter-spacing:-.04em;margin-bottom:13px}.moderation-detail-summary{padding:19px;background:#f5f7f1;border-radius:10px;margin-top:23px}.moderation-detail-summary h3{font-size:12px;color:#607258;margin-bottom:10px}.moderation-detail-summary p{font-size:13px;color:#334f35;line-height:1.8}.moderation-fields{margin:19px 0 0}.moderation-fields .info-row{padding:14px 0;font-size:11px}.moderation-fields dd{max-width:65%}.moderation-timeline{list-style:none;padding:0;margin:0}.moderation-timeline li{position:relative;margin:0 0 0 5px;padding:0 0 24px 23px;border-left:1px solid #dce5d6}.moderation-timeline li:last-child{border-left-color:transparent;padding-bottom:0}.moderation-timeline li:before{content:"";position:absolute;left:-4px;top:4px;width:7px;height:7px;background:#7b9b6f;border-radius:50%;box-shadow:0 0 0 4px #fff}.moderation-timeline strong{display:block;font-size:12px;font-weight:600}.moderation-timeline time{display:block;font-size:10px;color:#75856b;margin-top:6px}.moderation-timeline p{font-size:11px;color:#75816f;line-height:1.7;margin-top:7px}.related-record{width:100%;justify-content:space-between;margin-top:8px;font-size:12px}.moderation-detail-note{font-size:11px;line-height:1.85;color:#728068;background:#f4f6ef;border-radius:9px;padding:15px;margin-top:22px}.moderation-detail-note strong{display:block;color:#546848;margin-bottom:5px}.moderation-table .empty td{height:0}
+@media(max-width:1100px){.moderation-notice{align-items:flex-start}.operations-link{padding:17px;gap:11px}.moderation-stat{padding:18px}.moderation-tools{align-items:stretch;flex-wrap:wrap}.moderation-tools .search{max-width:none}}
+@media(max-width:800px){.operations-nav-label{display:none}.operations-overview{grid-template-columns:1fr;gap:10px}.moderation-stats{gap:10px}.moderation-stat{padding:15px}.moderation-stat-label{font-size:11px}.moderation-stat-number{font-size:27px}.moderation-policy{grid-template-columns:1fr;gap:13px}.moderation-notice{flex-direction:column;gap:8px}.moderation-tools .filter-group{flex-wrap:nowrap}.moderation-tools .select{min-width:0;max-width:none}.moderation-tools .button{flex-shrink:0}}
+@media(max-width:560px){.moderation-stats{grid-template-columns:1fr}.moderation-stat{display:grid;grid-template-columns:1fr auto;gap:10px}.moderation-stat-number{margin:0;grid-column:2;grid-row:1/3;align-self:center}.moderation-stat p{margin:0;font-size:10px}.moderation-stat-label{font-size:12px}.moderation-tools .filter-group{flex-wrap:wrap}.moderation-tools .select{flex:1 1 40%;width:40%}.moderation-tools .button{width:100%}.operations-value{font-size:21px!important}.operations-caption{display:block;font-size:10px}.operations-icon{width:31px;height:31px}.operations-link{padding:15px;gap:10px}.moderation-policy{padding:17px}.sidebar nav{gap:3px}.sidebar .nav-button{padding:11px}}
 </style>
 </head>
 <body>
@@ -53,6 +63,8 @@ dialog{padding:0;border:0;color:var(--ink);background:white;box-shadow:0 20px 80
 <symbol id="i-activity" viewBox="0 0 24 24"><path d="M2 12h5l3-8 4 16 3-8h5"/></symbol>
 <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-5 4 3 6-8"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V3m0 1c4-3 9 3 14 0v10c-5 3-10-3-14 0"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="M8 12h8"/></symbol>
 <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
 </svg>
 <section id="loginScreen" class="login" aria-label="뷰어 로그인">
@@ -94,6 +106,9 @@ dialog{padding:0;border:0;color:var(--ink);background:white;box-shadow:0 20px 80
       <button class="nav-button active" data-nav="overview" aria-current="page" aria-label="대시보드"><svg><use href="#i-grid"/></svg><span>대시보드</span></button>
       <button class="nav-button" data-nav="members" aria-label="멤버 현황"><svg><use href="#i-users"/></svg><span>멤버 현황</span></button>
       <button class="nav-button" data-nav="alerts" aria-label="주의 멤버"><svg><use href="#i-alert"/></svg><span>주의 멤버</span><span class="nav-count" id="navAlertCount"></span></button>
+      <div class="nav-label operations-nav-label">운영 현황</div>
+      <button class="nav-button" data-nav="reports" aria-label="신고 현황"><svg><use href="#i-flag"/></svg><span>신고 현황</span><span class="nav-count" id="navReportCount"></span></button>
+      <button class="nav-button" data-nav="sanctions" aria-label="제재 현황"><svg><use href="#i-shield"/></svg><span>제재 현황</span><span class="nav-count" id="navSanctionCount"></span></button>
       <button class="nav-button" data-nav="info" aria-label="그룹 정보"><svg><use href="#i-room"/></svg><span>그룹 정보</span></button>
     </nav>
     <div class="side-space"></div>
@@ -110,7 +125,7 @@ dialog{padding:0;border:0;color:var(--ink);background:white;box-shadow:0 20px 80
         <button type="button" class="channel-card" data-room="alpha" aria-pressed="false"><span class="channel-symbol" aria-hidden="true">알</span><span class="channel-main"><strong>알파 스쿼드</strong><span class="channel-count">전체 24명</span></span><span class="channel-state">채널 보기</span><svg class="icon channel-action" aria-hidden="true"><use href="#i-chevron"/></svg></button>
       </div>
     </section>
-    <div class="room-line"><div class="room-title"><span class="room-icon"><svg class="icon"><use href="#i-users"/></svg></span><span id="roomName" aria-live="polite" aria-atomic="true">문샷 서클</span><span class="sub" id="roomMemberCount"></span></div><span class="snapshot-time">시연 기준 2026.10.20 14:32 KST</span></div>
+    <div class="room-line"><div class="room-title"><span class="room-icon"><svg class="icon"><use href="#i-users"/></svg></span><span id="roomName" aria-live="polite" aria-atomic="true">문샷 서클</span><span class="sub" id="roomMemberCount"></span></div><span class="snapshot-time">시연 기준 2026.10.21 14:32 KST</span></div>
     <section id="overviewSection" aria-label="그룹 요약">
       <div class="stats-grid">
         <article class="stat primary"><div class="stat-label"><svg class="icon"><use href="#i-activity"/></svg>미실현 손익 <span style="font-size:9px;margin-left:auto">현재 포지션</span></div><div class="stat-value num" id="unrealized"></div><p class="stat-foot" id="unrealizedFoot"></p><svg class="icon ghost-icon"><use href="#i-chart"/></svg></article>
@@ -119,6 +134,7 @@ dialog{padding:0;border:0;color:var(--ink);background:white;box-shadow:0 20px 80
       </div>
     </section>
     <section class="connection-strip" id="connectionStrip" aria-label="멤버 연동 현황"></section>
+    <section id="operationsOverview" class="operations-overview" aria-label="신고 및 제재 요약"></section>
     <div id="dataSection">
       <div class="content-grid">
         <section class="panel" aria-labelledby="membersTitle">
@@ -131,12 +147,28 @@ dialog{padding:0;border:0;color:var(--ink);background:white;box-shadow:0 20px 80
         <aside class="right-column"><section class="panel"><div class="attention-head between"><div><h2>살펴볼 멤버</h2><p>현재 포지션의 주의 신호</p></div><svg class="icon" style="color:#b39868;width:17px"><use href="#i-alert"/></svg></div><div id="attentionList"></div><div class="attention-bottom">경고는 현재 조건에 따라 표시됩니다.<br>웹 뷰어에서는 확인만 할 수 있어요.</div></section><div class="view-hint"><strong>같은 정보, 더 넓은 화면</strong>모바일 관리자 대시보드의 정보를<br>데스크톱에서 편하게 살펴보세요.<br><br>손익 집계: 연동완료 일반 멤버<br>인원 집계: 방장·부방장 포함 전체</div></aside>
       </div>
     </div>
+    <section id="moderationSection" hidden aria-label="신고 및 제재 현황">
+      <div class="moderation-notice"><span class="pill amber">조회 범위 검토안</span><p>가상 기록으로 구성한 협의용 화면입니다. 웹 뷰어의 공개 범위와 처리 단계는 유스메타와 협의가 필요합니다.</p></div>
+      <div class="moderation-stats" id="moderationStats"></div>
+      <section class="panel" aria-labelledby="moderationTableTitle">
+        <div class="panel-heading"><div><h2 id="moderationTableTitle">신고 기록</h2><p id="moderationTableDescription"></p></div><span class="pill gray"><svg class="icon"><use href="#i-eye"/></svg>조회 전용</span></div>
+        <div class="table-tools moderation-tools">
+          <label class="search"><svg class="icon"><use href="#i-search"/></svg><span class="sr-only">운영 기록 검색</span><input id="moderationSearch" type="search" placeholder="대상 닉네임 또는 기록 번호" autocomplete="off"></label>
+          <div class="filter-group"><label class="sr-only" for="moderationStatus">처리 상태 필터</label><select id="moderationStatus" class="select"></select><label class="sr-only" for="moderationType">사유 또는 제재 종류 필터</label><select id="moderationType" class="select"></select><button id="resetModerationFilters" class="button">초기화</button></div>
+        </div>
+        <div class="table-wrap"><table class="moderation-table"><caption id="moderationTableCaption" class="sr-only">선택한 채널의 신고 기록</caption><thead id="moderationTableHead"></thead><tbody id="moderationRows"></tbody></table></div>
+        <div id="moderationEmpty" class="empty" hidden><svg class="icon"><use href="#i-search"/></svg><h3>조건에 맞는 기록이 없어요</h3><p>검색어 또는 필터를 변경해 주세요.</p><button class="button" data-reset-moderation>검색 조건 초기화</button></div>
+        <div class="table-foot"><span id="moderationCount" aria-live="polite"></span><nav class="pagination" id="moderationPagination" aria-label="운영 기록 페이지"></nav></div>
+      </section>
+      <div id="moderationPolicy" class="moderation-policy"></div>
+    </section>
     <section id="infoSection" hidden aria-label="그룹 정보"></section>
-    <footer class="page-foot"><span>Supercycl × YouthMeta</span><span>목업 v0.1 · 모든 인물·수치는 시연용입니다.</span></footer>
+    <footer class="page-foot"><span>Supercycl × YouthMeta</span><span>목업 v0.2 · 모든 인물·수치는 시연용입니다.</span></footer>
   </main>
 </div>
 <dialog class="drawer" id="memberDialog" aria-labelledby="detailTitle"><header class="drawer-header"><h2 id="detailTitle">멤버 상세</h2><button class="icon-button" data-close="memberDialog" aria-label="멤버 상세 닫기"><svg><use href="#i-close"/></svg></button></header><div class="drawer-body" id="memberDetail"></div></dialog>
-<dialog class="help-dialog" id="helpDialog" aria-labelledby="helpTitle"><header class="drawer-header"><h2 id="helpTitle">검토용 목업 안내</h2><button class="icon-button" data-close="helpDialog" aria-label="검토 안내 닫기"><svg><use href="#i-close"/></svg></button></header><div class="help-body"><h3>직접 눌러보세요</h3><p>상단 채널 버튼으로 채널 전환, 오늘·7일·30일·전체 기간 선택, 멤버 검색과 정렬, 연동 상태 필터, 멤버 상세 조회를 시연할 수 있습니다.</p><h3>이번 목업의 범위</h3><p>로그인은 시연용이며 실제 계정이나 비밀번호를 사용하지 않습니다. 모든 데이터는 파일 안에 포함된 가상 데이터입니다. 새로고침 버튼은 같은 시연 데이터를 다시 표시합니다.</p><h3>조회 범위의 기본 가정</h3><p>기존에 관리자 권한을 가진 담당자가 자신이 관리하는 그룹을 조회한다고 가정했습니다. 방장·부방장은 손익 집계와 경고 대상에서 제외하며, 계정 잔고는 표시하지 않습니다.</p><h3>유스메타와 함께 정할 내용</h3><ul><li>기존 관리자 계정 로그인과 별도 뷰어 계정 중 사용할 방식</li><li>뷰어 계정에 허용할 그룹과 멤버 정보 범위</li><li>실제 데이터 갱신 주기와 웹 전용 조회 권한</li></ul><button class="button primary" data-close="helpDialog">확인했어요</button></div></dialog>
+<dialog class="drawer" id="moderationDialog" aria-labelledby="moderationDetailTitle"><header class="drawer-header"><h2 id="moderationDetailTitle">운영 기록 상세</h2><button class="icon-button" data-close="moderationDialog" aria-label="운영 기록 상세 닫기"><svg><use href="#i-close"/></svg></button></header><div class="drawer-body" id="moderationDetail"></div></dialog>
+<dialog class="help-dialog" id="helpDialog" aria-labelledby="helpTitle"><header class="drawer-header"><h2 id="helpTitle">검토용 목업 안내</h2><button class="icon-button" data-close="helpDialog" aria-label="검토 안내 닫기"><svg><use href="#i-close"/></svg></button></header><div class="help-body"><h3>직접 눌러보세요</h3><p>상단 채널 버튼으로 채널 전환, 오늘·7일·30일·전체 기간 선택, 멤버 검색과 정렬, 연동 상태 필터, 멤버 상세 조회와 신고·제재 기록의 검색·필터·상세 조회를 시연할 수 있습니다.</p><h3>이번 목업의 범위</h3><p>로그인은 시연용이며 실제 계정이나 비밀번호를 사용하지 않습니다. 모든 데이터는 파일 안에 포함된 가상 데이터입니다. 새로고침 버튼은 같은 시연 데이터를 다시 표시합니다.</p><h3>조회 범위의 기본 가정</h3><p>기존에 관리자 권한을 가진 담당자가 자신이 관리하는 그룹을 조회한다고 가정했습니다. 방장·부방장은 손익 집계와 경고 대상에서 제외하며, 계정 잔고는 표시하지 않습니다.</p><h3>신고·제재 조회 검토안</h3><p>신고 사유 4종과 채널 강퇴·차단 규칙은 모바일 커뮤니티 정책을 참고했습니다. 신고자는 공개하지 않으며 신고 메모와 원문·첨부도 이 뷰어에 포함하지 않습니다. 개인 차단과 포지션 경고는 제재로 집계하지 않습니다.</p><p>신고 현황의 뷰어 공개, 처리 단계와 이력 필드, 운영 제재의 세부 범위·해제 기준은 협의용 예시입니다. 신고 심사 주체는 Supercycl 운영을 가정하며 유스메타 합의가 필요합니다. 신고자에게 결과 알림을 보내는 기능은 없습니다.</p><h3>유스메타와 함께 정할 내용</h3><ul><li>기존 관리자 계정 로그인과 별도 뷰어 계정 중 사용할 방식</li><li>뷰어 계정에 허용할 그룹과 멤버 정보 범위</li><li>실제 데이터 갱신 주기와 웹 전용 조회 권한</li><li>신고·제재 기록의 조회 대상, 공개 범위와 처리 단계</li></ul><button class="button primary" data-close="helpDialog">확인했어요</button></div></dialog>
 <div class="toast" id="toast" role="status" hidden></div>
 <script>
 'use strict';
@@ -148,7 +180,7 @@ const money = cents => (cents/100).toLocaleString('en-US',{minimumFractionDigits
 const statusText = {connected:'연동완료',pending:'거래소 미연동',unregistered:'EX ID 없음'};
 const state = {loggedIn:false,room:'moon',view:'overview',period:'today',query:'',filter:'all',sort:'warning',page:1};
 const PAGE_SIZE = 7;
-const periodLabels = {today:'오늘 · 10.20 00:00 ~ 14:32 KST', '7d':'최근 7일 · 10.14 ~ 10.20 KST','30d':'최근 30일 · 09.21 ~ 10.20 KST',all:'그룹 개설 이후 · 09.01 ~ 10.20 KST'};
+const periodLabels = {today:'오늘 · 10.21 00:00 ~ 14:32 KST', '7d':'최근 7일 · 10.15 ~ 10.21 KST','30d':'최근 30일 · 09.22 ~ 10.21 KST',all:'그룹 개설 이후 · 09.01 ~ 10.21 KST'};
 const names = ['서준 팀장','하린','지후','서연','민준','도윤','유나','시우','하은','예린','건우','민서','지안','준서','채원','은우','수아','태오','나래','유진','지민','바다','서우','이안'];
 const subscriptionSets = [['Premium','Smart','Blinker','NEXT'],['Premium','NEXT'],['Blinker'],['Smart','NEXT'],['Premium'],[]];
 function makeMembers(room, count) {
@@ -176,6 +208,319 @@ const groups = {
   moon:{name:'문샷 서클',intro:'시장의 흐름과 Trade idea를 나누는 커뮤니티입니다.',created:'2026.09.01',seed:'10%',members:makeMembers('moon',18)},
   alpha:{name:'알파 스쿼드',intro:'차분한 시장 관찰과 꾸준한 기록을 함께합니다.',created:'2026.09.01',seed:'20%',members:makeMembers('alpha',24)}
 };
+// Fictional moderation data; access scope and workflow statuses are discussion proposals.
+const reportRecords = [
+  {
+    "id": "R-108",
+    "room": "moon",
+    "target": "민서",
+    "content": "사진",
+    "reason": "spam",
+    "status": "received",
+    "created": "2026.10.21 13:40",
+    "updated": "2026.10.21 13:40",
+    "outcome": "아직 조치 없음",
+    "sanction": null
+  },
+  {
+    "id": "R-107",
+    "room": "moon",
+    "target": "라온",
+    "content": "텍스트 메시지",
+    "reason": "abuse",
+    "status": "received",
+    "created": "2026.10.21 11:25",
+    "updated": "2026.10.21 11:25",
+    "outcome": "아직 조치 없음",
+    "sanction": null
+  },
+  {
+    "id": "R-106",
+    "room": "moon",
+    "target": "별하",
+    "content": "Trade idea",
+    "reason": "investment",
+    "status": "reviewing",
+    "created": "2026.10.20 16:10",
+    "updated": "2026.10.21 09:30",
+    "outcome": "검토 중 · 조치 미결정",
+    "sanction": null
+  },
+  {
+    "id": "R-105",
+    "room": "moon",
+    "target": "초록별",
+    "content": "텍스트 메시지",
+    "reason": "spam",
+    "status": "resolved",
+    "created": "2026.10.19 10:20",
+    "updated": "2026.10.19 15:00",
+    "outcome": "메시지 삭제 · 채널 강퇴",
+    "sanction": "S-104"
+  },
+  {
+    "id": "R-104",
+    "room": "moon",
+    "target": "도윤",
+    "content": "손익 카드",
+    "reason": "other",
+    "status": "dismissed",
+    "created": "2026.10.18 12:00",
+    "updated": "2026.10.19 10:00",
+    "outcome": "위반 근거 미확인 · 조치 없음",
+    "sanction": null
+  },
+  {
+    "id": "R-103",
+    "room": "moon",
+    "target": "한울",
+    "content": "Trade idea",
+    "reason": "investment",
+    "status": "resolved",
+    "created": "2026.10.17 09:40",
+    "updated": "2026.10.18 11:00",
+    "outcome": "커뮤니티 이용 제한",
+    "sanction": "S-103"
+  },
+  {
+    "id": "R-102",
+    "room": "moon",
+    "target": "새벽",
+    "content": "텍스트 메시지",
+    "reason": "spam",
+    "status": "resolved",
+    "created": "2026.10.14 08:00",
+    "updated": "2026.10.14 14:00",
+    "outcome": "메시지 삭제 · 채널 강퇴",
+    "sanction": "S-102"
+  },
+  {
+    "id": "R-101",
+    "room": "moon",
+    "target": "태양",
+    "content": "Trade idea",
+    "reason": "investment",
+    "status": "resolved",
+    "created": "2026.10.12 10:30",
+    "updated": "2026.10.13 09:00",
+    "outcome": "방 운영 기능 제한",
+    "sanction": "S-101"
+  },
+  {
+    "id": "R-204",
+    "room": "alpha",
+    "target": "여울",
+    "content": "텍스트 메시지",
+    "reason": "abuse",
+    "status": "received",
+    "created": "2026.10.21 10:05",
+    "updated": "2026.10.21 10:05",
+    "outcome": "아직 조치 없음",
+    "sanction": null
+  },
+  {
+    "id": "R-203",
+    "room": "alpha",
+    "target": "푸른숲",
+    "content": "텍스트 메시지",
+    "reason": "spam",
+    "status": "resolved",
+    "created": "2026.10.20 09:20",
+    "updated": "2026.10.20 13:00",
+    "outcome": "메시지 삭제 · 채널 강퇴",
+    "sanction": "S-202"
+  },
+  {
+    "id": "R-202",
+    "room": "alpha",
+    "target": "솔빛",
+    "content": "Trade idea",
+    "reason": "investment",
+    "status": "resolved",
+    "created": "2026.10.18 15:10",
+    "updated": "2026.10.19 17:00",
+    "outcome": "YouthMeta 방 개설 자격 회수",
+    "sanction": "S-201"
+  },
+  {
+    "id": "R-201",
+    "room": "alpha",
+    "target": "민준",
+    "content": "사진",
+    "reason": "other",
+    "status": "dismissed",
+    "created": "2026.10.16 10:30",
+    "updated": "2026.10.17 11:00",
+    "outcome": "위반 근거 미확인 · 조치 없음",
+    "sanction": null
+  }
+];
+const sanctionRecords = [
+  {
+    "id": "S-104",
+    "room": "moon",
+    "target": "초록별",
+    "type": "room-block",
+    "status": "active",
+    "reason": "반복적인 광고·도배",
+    "authority": "방 관리자",
+    "started": "2026.10.19 15:00",
+    "released": null,
+    "releaseReason": null
+  },
+  {
+    "id": "S-103",
+    "room": "moon",
+    "target": "한울",
+    "type": "community-limit",
+    "status": "active",
+    "reason": "수익 보장 표현 및 외부 유료 채널 유도",
+    "authority": "Supercycl 운영",
+    "started": "2026.10.18 11:00",
+    "released": null,
+    "releaseReason": null
+  },
+  {
+    "id": "S-102",
+    "room": "moon",
+    "target": "새벽",
+    "type": "room-block",
+    "status": "released",
+    "reason": "반복적인 홍보 메시지",
+    "authority": "방 관리자",
+    "started": "2026.10.14 14:00",
+    "released": "2026.10.20 09:00",
+    "releaseReason": "운영 검토 후 채널 차단 해제"
+  },
+  {
+    "id": "S-101",
+    "room": "moon",
+    "target": "태양",
+    "type": "room-operation",
+    "status": "released",
+    "reason": "Trade idea의 수익 보장 표현",
+    "authority": "Supercycl 운영",
+    "started": "2026.10.13 09:00",
+    "released": "2026.10.19 14:00",
+    "releaseReason": "운영 재검토 후 제한 해제"
+  },
+  {
+    "id": "S-202",
+    "room": "alpha",
+    "target": "푸른숲",
+    "type": "room-block",
+    "status": "active",
+    "reason": "반복적인 광고 메시지",
+    "authority": "방 관리자",
+    "started": "2026.10.20 13:00",
+    "released": null,
+    "releaseReason": null
+  },
+  {
+    "id": "S-201",
+    "room": "alpha",
+    "target": "솔빛",
+    "type": "room-eligibility",
+    "status": "active",
+    "reason": "별도 대가 요구 및 외부 채널 유도",
+    "authority": "YouthMeta",
+    "started": "2026.10.19 17:00",
+    "released": null,
+    "releaseReason": null
+  }
+];
+
+const moderationFilter={query:'',status:'all',type:'all',page:1};
+const MOD_PAGE_SIZE=6;
+const reportReasons={spam:'스팸 또는 사기',abuse:'괴롭힘 또는 욕설',investment:'오해를 부르는 투자 주장',other:'기타'};
+const reportStatuses={received:'접수',reviewing:'검토 중',resolved:'조치 완료',dismissed:'조치 없음'};
+const sanctionStatuses={active:'적용 중',released:'해제됨'};
+const sanctionTypes={'room-block':'채널 강퇴·재참여 차단','community-limit':'커뮤니티 이용 제한','room-operation':'방 운영 기능 제한','room-eligibility':'방 개설 자격 회수'};
+const roomReports=()=>reportRecords.filter(r=>r.room===state.room);
+const roomSanctions=()=>sanctionRecords.filter(r=>r.room===state.room);
+const pendingReports=()=>roomReports().filter(r=>r.status==='received'||r.status==='reviewing');
+const activeSanctions=()=>roomSanctions().filter(r=>r.status==='active');
+const activeSanctionUsers=(type)=>new Set(activeSanctions().filter(r=>!type||r.type===type).map(r=>r.target)).size;
+const isModeration=()=>state.view==='reports'||state.view==='sanctions';
+const recordBadge=status=>`<span class="pill ${({received:'amber',reviewing:'blue',resolved:'green',dismissed:'gray',active:'red',released:'gray'})[status]}">${escapeHTML(reportStatuses[status]||sanctionStatuses[status])}</span>`;
+const sanctionScope=r=>({'room-block':groups[r.room].name+' 한정','community-limit':'커뮤니티 전체','room-operation':groups[r.room].name+'의 방 운영','room-eligibility':'새 방 개설 자격'})[r.type];
+const sanctionEffect=r=>({'room-block':'채널에서 퇴장 처리되며, 차단을 해제하기 전까지 같은 채널에 다시 참여할 수 없습니다. 다른 채널의 참여에는 영향을 주지 않습니다.','community-limit':'계정의 커뮤니티 이용을 제한하는 조치입니다. 세부 제한 범위와 해제 기준은 협의 대상입니다.','room-operation':'Trade idea 발행 등 방 운영 기능을 제한하는 조치입니다. 세부 기능과 해제 기준은 협의 대상입니다.','room-eligibility':'Supercycl의 요청을 받아 YouthMeta가 새 방 개설 자격을 회수하는 예시입니다. 이미 운영 중인 방의 방장 역할과는 별개입니다.'})[r.type];
+function resetModerationFilters(){
+  Object.assign(moderationFilter,{query:'',status:'all',type:'all',page:1});
+  $('moderationSearch').value='';$('moderationStatus').value='all';$('moderationType').value='all';
+}
+function renderOperationsOverview(){
+  const pending=pendingReports(),active=activeSanctions();
+  $('navReportCount').textContent=pending.length;
+  $('navReportCount').title='접수·검토 중 신고';
+  $('navSanctionCount').textContent=activeSanctionUsers();
+  $('navSanctionCount').title='적용 중 제재 대상 인원';
+  $('operationsOverview').innerHTML=`<button class="operations-link" data-open-moderation="reports"><span class="operations-icon">${icon('flag')}</span><span><span class="operations-title">신고 현황</span><span class="operations-caption">접수·검토 중 ${pending.length}건 · 전체 ${roomReports().length}건</span></span><span class="operations-value num">${pending.length}<small>건</small></span>${icon('chevron')}</button><button class="operations-link" data-open-moderation="sanctions"><span class="operations-icon shield">${icon('shield')}</span><span><span class="operations-title">제재 현황</span><span class="operations-caption">적용 중 ${active.length}건 · 현재 채널 관련 기록</span></span><span class="operations-value num">${activeSanctionUsers()}<small>명</small></span>${icon('chevron')}</button>`;
+}
+function filteredModerationRecords(){
+  const reporting=state.view==='reports';
+  const query=moderationFilter.query.trim().toLocaleLowerCase('ko');
+  return (reporting?roomReports():roomSanctions()).filter(r=>(moderationFilter.status==='all'||r.status===moderationFilter.status)&&(moderationFilter.type==='all'||r[reporting?'reason':'type']===moderationFilter.type)&&`${r.id} ${r.target}`.toLocaleLowerCase('ko').includes(query)).sort((a,b)=>(b.created||b.started).localeCompare(a.created||a.started));
+}
+function renderModeration(){
+  if(!isModeration())return;
+  const reporting=state.view==='reports',all=reporting?roomReports():roomSanctions();
+  const stat=(label,value,unit,description,emphasis=false)=>`<article class="moderation-stat ${emphasis?'emphasis':''}"><span class="moderation-stat-label">${escapeHTML(label)}</span><div class="moderation-stat-number num">${value}<small>${unit}</small></div><p>${escapeHTML(description)}</p></article>`;
+  $('moderationStats').innerHTML=reporting?
+    stat('전체 신고',all.length,'건','현재 채널 · 전체 기간')+stat('접수·검토 중',pendingReports().length,'건',`접수 ${all.filter(r=>r.status==='received').length}건 · 검토 중 ${all.filter(r=>r.status==='reviewing').length}건`,true)+stat('검토 종료',all.filter(r=>['resolved','dismissed'].includes(r.status)).length,'건',`조치 완료 ${all.filter(r=>r.status==='resolved').length}건 · 조치 없음 ${all.filter(r=>r.status==='dismissed').length}건`):
+    stat('적용 중 대상',activeSanctionUsers(),'명',`적용 중 제재 ${activeSanctions().length}건`,true)+stat('채널 재참여 차단',activeSanctionUsers('room-block'),'명','현재 채널에서 차단이 유지 중인 대상')+stat('해제 기록',all.filter(r=>r.status==='released').length,'건','채널 차단 해제 시 자동 복귀하지 않음');
+  const statusOptions=reporting?reportStatuses:sanctionStatuses, typeOptions=reporting?reportReasons:sanctionTypes;
+  if($('moderationStatus').dataset.view!==state.view){
+    $('moderationStatus').innerHTML='<option value="all">모든 상태</option>'+Object.entries(statusOptions).map(([key,label])=>`<option value="${key}">${label}</option>`).join('');
+    $('moderationType').innerHTML=`<option value="all">${reporting?'모든 신고 사유':'모든 제재 종류'}</option>`+Object.entries(typeOptions).map(([key,label])=>`<option value="${key}">${label}</option>`).join('');
+    $('moderationStatus').dataset.view=state.view;
+  }
+  $('moderationStatus').value=moderationFilter.status;$('moderationType').value=moderationFilter.type;
+  $('moderationTableTitle').textContent=reporting?'신고 기록':'제재 기록';
+  $('moderationTableCaption').textContent=`${currentGroup().name}의 ${reporting?'신고':'제재'} 기록`;
+  $('moderationTableDescription').textContent=reporting?'최근 접수순 · 전체 기간 · 신고자와 신고 메모는 공개하지 않습니다.':'최근 적용순 · 현재 채널과 관련된 기록 · 각 제재의 적용 범위는 별도로 표시합니다.';
+  const headers=reporting?['신고 번호 · 접수일','대상 · 콘텐츠','신고 사유','처리 상태','조치 결과','상세']:['제재 번호 · 적용일','대상','제재 종류 · 적용 범위','현재 상태','시행 주체','상세'];
+  $('moderationTableHead').innerHTML='<tr>'+headers.map(h=>`<th scope="col">${h}</th>`).join('')+'</tr>';
+  const list=filteredModerationRecords(),pages=Math.max(1,Math.ceil(list.length/MOD_PAGE_SIZE));
+  moderationFilter.page=Math.min(moderationFilter.page,pages);
+  const start=(moderationFilter.page-1)*MOD_PAGE_SIZE;
+  $('moderationRows').innerHTML=list.slice(start,start+MOD_PAGE_SIZE).map(r=>{
+    const type=reporting?'report':'sanction';
+    return `<tr><td><span class="record-id">${r.id}</span><time class="record-date">${r.created||r.started}</time></td><td><span class="record-person">${escapeHTML(r.target)}</span>${reporting?`<span class="record-secondary">${escapeHTML(r.content)}</span>`:''}</td><td>${escapeHTML(reporting?reportReasons[r.reason]:sanctionTypes[r.type])}${reporting?'':`<span class="record-secondary">${escapeHTML(sanctionScope(r))}</span>`}</td><td>${recordBadge(r.status)}</td><td><span class="record-outcome">${escapeHTML(reporting?r.outcome:r.authority)}</span></td><td><button class="record-detail-button" data-${type}="${r.id}" aria-label="${r.id} ${escapeHTML(r.target)} ${reporting?'신고':'제재'} 상세 보기">보기 ${icon('chevron')}</button></td></tr>`;
+  }).join('');
+  $('moderationEmpty').hidden=list.length>0;
+  $('moderationCount').textContent=`${list.length?`${start+1} ~ ${Math.min(start+MOD_PAGE_SIZE,list.length)}`:'0'} / ${list.length}건`;
+  $('moderationPagination').innerHTML=`<button data-mod-page="${moderationFilter.page-1}" aria-label="이전 기록 페이지" ${moderationFilter.page===1?'disabled':''}>${icon('back')}</button>${Array.from({length:pages},(_,i)=>`<button data-mod-page="${i+1}" aria-label="기록 ${i+1}페이지" ${i+1===moderationFilter.page?'class="active" aria-current="page"':''}>${i+1}</button>`).join('')}<button data-mod-page="${moderationFilter.page+1}" aria-label="다음 기록 페이지" ${moderationFilter.page===pages?'disabled':''}>${icon('chevron')}</button>`;
+  $('moderationPolicy').innerHTML=reporting?'<div><strong>신고자의 정보는 비공개</strong>신고자 신원과 신고 메모·원문·첨부는 이 뷰어에 제공하지 않습니다. 신고만으로 메시지가 자동 숨김·삭제되지는 않습니다.</div><div><strong>심사 주체와 공개 범위</strong>Supercycl 운영 심사를 가정한 검토안입니다. 방 관리자가 심사하는 화면은 아니며, 신고자에게 결과 알림을 보내지 않습니다.</div>':'<div><strong>채널 차단과 개인 차단은 별개</strong>채널 강퇴는 퇴장과 해당 채널의 재참여 차단을 뜻합니다. 멤버가 자신의 화면에서 메시지를 가리는 개인 차단은 여기에 집계하지 않습니다.</div><div><strong>이곳에서는 이력만 확인해요</strong>제재 적용·해제·기간 변경 기능은 없습니다. 포지션의 역주문·손실 경고도 제재에 포함하지 않습니다.</div>';
+}
+function timelineItem(title,time,description){return `<li><strong>${escapeHTML(title)}</strong><time>${escapeHTML(time)} KST</time><p>${escapeHTML(description)}</p></li>`;}
+function openModerationDetail(kind,id){
+  if(!state.loggedIn)return;
+  const reporting=kind==='report',r=(reporting?roomReports():roomSanctions()).find(item=>item.id===id);
+  if(!r)return;
+  $('moderationDetailTitle').textContent=reporting?'신고 상세':'제재 상세';
+  const field=(label,value)=>`<div class="info-row"><dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd></div>`;
+  let fields='',timeline='',related='',note='';
+  if(reporting){
+    fields=field('채널',currentGroup().name)+field('신고 대상',r.content)+field('신고 사유',reportReasons[r.reason])+field('접수 시각',r.created+' KST')+field('최근 처리 시각',r.updated+' KST')+field('심사 주체 (검토안)','Supercycl 운영');
+    timeline=timelineItem('신고 접수',r.created,'신고가 접수되었습니다. 접수 자체로 자동 조치하지 않습니다.');
+    if(r.status!=='received')timeline+=timelineItem(reportStatuses[r.status],r.updated,r.status==='reviewing'?'운영 검토 중인 예시입니다. 아직 조치는 결정되지 않았습니다.':r.outcome);
+    if(r.sanction){const linked=roomSanctions().find(item=>item.id===r.sanction);related=`<section class="detail-section"><h3>관련 제재</h3><button class="button related-record" data-sanction="${linked.id}"><span>${linked.id} · ${escapeHTML(sanctionTypes[linked.type])}</span>${icon('chevron')}</button><p class="record-secondary">현재 ${sanctionStatuses[linked.status]} · 신고의 처리 결과와 현재 제재 상태는 별개입니다.</p></section>`;}
+    note='<strong>신고자 보호</strong>신고자 정보와 신고 메모·원문·첨부는 이 뷰어에 포함하지 않습니다. 신고자가 누구인지 상대방이나 방 관리자에게 알리지 않습니다.';
+  }else{
+    fields=field('관련 채널',currentGroup().name)+field('제재 종류',sanctionTypes[r.type])+field('적용 범위',sanctionScope(r))+field('조치 사유 (예시)',r.reason)+field('시행 주체',r.authority)+field('적용 시각',r.started+' KST')+field('해제 시각',r.released?r.released+' KST':'해제 기록 없음');
+    timeline=timelineItem('제재 적용',r.started,r.authority+' · '+sanctionTypes[r.type]);
+    if(r.released)timeline+=timelineItem('제재 해제',r.released,r.releaseReason);
+    const linked=roomReports().filter(item=>item.sanction===r.id);
+    if(linked.length)related=`<section class="detail-section"><h3>관련 신고</h3>${linked.map(item=>`<button class="button related-record" data-report="${item.id}"><span>${item.id} · ${escapeHTML(reportReasons[item.reason])}</span>${icon('chevron')}</button>`).join('')}</section>`;
+    note=r.type==='room-block'?'<strong>해제는 재참여를 허용하는 것</strong>차단을 해제해도 채널에 자동으로 복귀하지 않습니다. 방장·부방장은 강퇴 대상이 아니며 부방장을 내보내려면 먼저 역할을 해제해야 합니다.':'<strong>운영 제재의 세부 기준은 협의 대상</strong>상세 제한 범위, 처리 기한, 해제 기준과 이의 절차는 아직 확정되지 않았습니다. 이 화면은 실제 제재를 수행하지 않습니다.';
+  }
+  $('moderationDetail').innerHTML=`<p class="moderation-detail-kicker">${r.id} · ${currentGroup().name}</p><h3 class="moderation-person">${escapeHTML(r.target)}</h3><div class="flex">${recordBadge(r.status)}<span class="pill gray">가상 기록</span></div><div class="moderation-detail-summary"><h3>${reporting?'조치 결과':'적용 범위와 효과'}</h3><p>${escapeHTML(reporting?r.outcome:(r.status==='released'?'현재 해제된 제재입니다. 아래는 적용 당시의 범위입니다. ':'')+sanctionEffect(r))}</p></div><dl class="moderation-fields">${fields}</dl><section class="detail-section"><h3>처리 이력 <span class="pill gray">예시</span></h3><ol class="moderation-timeline">${timeline}</ol></section>${related}<div class="moderation-detail-note">${note}</div><div class="drawer-readonly flex">${icon('eye')}기록 조회만 가능합니다. 처리·제재·해제 기능은 제공하지 않습니다.</div>`;
+  const dialog=$('moderationDialog');if(!dialog.open)dialog.showModal();dialog.scrollTop=0;
+  dialog.querySelector('[data-close]').focus({preventScroll:true});
+}
+function openModerationView(view){state.view=view;resetFilters();render();window.scrollTo(0,0);}
+
 const currentGroup = () => groups[state.room];
 const eligible = () => currentGroup().members.filter(m=>m.role==='member'&&m.status==='connected');
 const warningMembers = () => eligible().filter(m=>m.warnings.length);
@@ -271,19 +616,21 @@ function renderAttention() {
 }
 function renderInfo() {
   const g=currentGroup();
-  $('infoSection').innerHTML=`<div class="info-grid"><article class="panel"><div class="panel-heading"><h2>그룹 기본 정보</h2><span class="pill gray">${icon('eye')}조회 전용</span></div><div class="info-body"><h3 class="info-title">${g.name}</h3><p class="group-description">${g.intro}</p><dl><div class="info-row"><dt>방장</dt><dd>서준 팀장 <span class="pill role">나</span></dd></div><div class="info-row"><dt>부방장</dt><dd>하린</dd></div><div class="info-row"><dt>전체 멤버</dt><dd>${g.members.length}명</dd></div><div class="info-row"><dt>그룹 개설일</dt><dd>${g.created}</dd></div><div class="info-row"><dt>기본 시드 한도</dt><dd>${g.seed}</dd></div></dl><p class="info-copy">기본 시드 한도는 새로 공유하는 Trade idea의 빠른 주문 한도에 적용됩니다. 이미 공유한 Trade idea의 한도는 바뀌지 않습니다.</p></div></article><article class="panel"><div class="panel-heading"><h2>내 조회 권한</h2>${icon('lock')}</div><div class="info-body"><div class="info-row"><dt>계정</dt><dd>viewer@example.com</dd></div><div class="info-row"><dt>웹 권한</dt><dd><span class="pill green">뷰어</span></dd></div><div class="info-row"><dt>조회 가능한 그룹</dt><dd>문샷 서클<br>알파 스쿼드</dd></div><ul class="info-list"><li>${icon('check')}그룹 손익과 연동 현황 확인</li><li>${icon('check')}멤버별 구독·알림 상태 확인</li><li>${icon('check')}멤버의 현재 포지션·PnL 조회</li></ul><p class="info-copy">그룹 설정, 멤버 관리, 채팅 전송 기능은 제공하지 않습니다. 실제 계정의 권한과 조회 범위는 별도 협의가 필요합니다.</p></div></article></div>`;
+  $('infoSection').innerHTML=`<div class="info-grid"><article class="panel"><div class="panel-heading"><h2>그룹 기본 정보</h2><span class="pill gray">${icon('eye')}조회 전용</span></div><div class="info-body"><h3 class="info-title">${g.name}</h3><p class="group-description">${g.intro}</p><dl><div class="info-row"><dt>방장</dt><dd>서준 팀장 <span class="pill role">나</span></dd></div><div class="info-row"><dt>부방장</dt><dd>하린</dd></div><div class="info-row"><dt>전체 멤버</dt><dd>${g.members.length}명</dd></div><div class="info-row"><dt>그룹 개설일</dt><dd>${g.created}</dd></div><div class="info-row"><dt>기본 시드 한도</dt><dd>${g.seed}</dd></div></dl><p class="info-copy">기본 시드 한도는 새로 공유하는 Trade idea의 빠른 주문 한도에 적용됩니다. 이미 공유한 Trade idea의 한도는 바뀌지 않습니다.</p></div></article><article class="panel"><div class="panel-heading"><h2>내 조회 권한</h2>${icon('lock')}</div><div class="info-body"><div class="info-row"><dt>계정</dt><dd>viewer@example.com</dd></div><div class="info-row"><dt>웹 권한</dt><dd><span class="pill green">뷰어</span></dd></div><div class="info-row"><dt>조회 가능한 그룹</dt><dd>문샷 서클<br>알파 스쿼드</dd></div><ul class="info-list"><li>${icon('check')}그룹 손익과 연동 현황 확인</li><li>${icon('check')}멤버별 구독·알림 상태 확인</li><li>${icon('check')}멤버의 현재 포지션·PnL 조회</li><li>${icon('check')}신고·제재 기록 조회 (검토안)</li></ul><p class="info-copy">그룹 설정, 멤버 관리, 채팅 전송 기능은 제공하지 않습니다. 실제 계정의 권한과 조회 범위는 별도 협의가 필요합니다.</p></div></article></div>`;
 }
 function render() {
-  const titles={overview:['커뮤니티 대시보드','담당 그룹의 손익과 멤버 현황을 한곳에서 확인하세요.','대시보드'],members:['멤버 현황','연동 상태와 구독, 현재 포지션을 멤버별로 살펴보세요.','멤버 현황'],alerts:['주의 멤버','현재 주의가 필요한 멤버의 포지션과 손익을 확인하세요.','주의 멤버'],info:['그룹 정보','그룹의 기본 정보와 내 조회 권한을 확인하세요.','그룹 정보']};
+  const titles={overview:['커뮤니티 대시보드','담당 그룹의 손익과 멤버 현황을 한곳에서 확인하세요.','대시보드'],members:['멤버 현황','연동 상태와 구독, 현재 포지션을 멤버별로 살펴보세요.','멤버 현황'],alerts:['주의 멤버','현재 주의가 필요한 멤버의 포지션과 손익을 확인하세요.','주의 멤버'],reports:['신고 현황','선택한 채널의 신고 사유와 처리 경과를 조회합니다.','신고 현황'],sanctions:['제재 현황','선택한 채널과 관련된 제재의 적용 범위와 이력을 확인합니다.','제재 현황'],info:['그룹 정보','그룹의 기본 정보와 내 조회 권한을 확인하세요.','그룹 정보']};
   const title=titles[state.view];
   $('pageTitle').textContent=title[0];$('pageDescription').textContent=title[1];$('breadcrumbCurrent').textContent=title[2];
   document.querySelectorAll('[data-nav]').forEach(b=>{const active=b.dataset.nav===state.view;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
   $('overviewSection').hidden=state.view!=='overview';
-  $('connectionStrip').hidden=state.view==='info';
-  $('dataSection').hidden=state.view==='info';
+  $('connectionStrip').hidden=state.view==='info'||isModeration();
+  $('dataSection').hidden=state.view==='info'||isModeration();
+  $('operationsOverview').hidden=state.view!=='overview';
+  $('moderationSection').hidden=!isModeration();
   $('infoSection').hidden=state.view!=='info';
   $('main').classList.toggle('full-table',state.view!=='overview');
-  renderSummary();renderTable();renderAttention();if(state.view==='info')renderInfo();
+  renderSummary();renderTable();renderAttention();renderOperationsOverview();if(state.view==='info')renderInfo();if(isModeration())renderModeration();
 }
 function openMember(id) {
   if(!state.loggedIn)return;
@@ -303,6 +650,7 @@ function openMember(id) {
   $('memberDialog').showModal();
 }
 function resetFilters() {
+  resetModerationFilters();
   state.query='';state.filter='all';state.sort='warning';state.page=1;
   $('memberSearch').value='';$('connectionFilter').value='all';$('memberSort').value='warning';
 }
@@ -324,10 +672,19 @@ $('memberSort').addEventListener('change',e=>{state.sort=e.target.value;state.pa
 $('clearFilters').addEventListener('click',()=>{resetFilters();render();$('memberSearch').focus();});
 $('refreshButton').addEventListener('click',()=>{render();showToast('시연 데이터를 다시 표시했어요. 실제 서버와 연결되지 않은 목업입니다.');});
 $('helpButton').addEventListener('click',()=>$('helpDialog').showModal());
+$('moderationSearch').addEventListener('input',e=>{moderationFilter.query=e.target.value;moderationFilter.page=1;renderModeration();});
+$('moderationStatus').addEventListener('change',e=>{moderationFilter.status=e.target.value;moderationFilter.page=1;renderModeration();});
+$('moderationType').addEventListener('change',e=>{moderationFilter.type=e.target.value;moderationFilter.page=1;renderModeration();});
+$('resetModerationFilters').addEventListener('click',()=>{resetModerationFilters();renderModeration();});
 document.addEventListener('click',e=>{
   const close=e.target.closest('[data-close]');if(close){$(close.dataset.close).close();return;}
   if(!state.loggedIn)return;
   const room=e.target.closest('[data-room]');if(room){if(state.room!==room.dataset.room){state.room=room.dataset.room;resetFilters();render();}return;}
+  const modView=e.target.closest('[data-open-moderation]');if(modView){openModerationView(modView.dataset.openModeration);return;}
+  const report=e.target.closest('[data-report]');if(report){openModerationDetail('report',report.dataset.report);return;}
+  const sanction=e.target.closest('[data-sanction]');if(sanction){openModerationDetail('sanction',sanction.dataset.sanction);return;}
+  const modPage=e.target.closest('[data-mod-page]');if(modPage&&!modPage.disabled){moderationFilter.page=Number(modPage.dataset.modPage);renderModeration();return;}
+  if(e.target.closest('[data-reset-moderation]')){resetModerationFilters();renderModeration();$('moderationSearch').focus();return;}
   const nav=e.target.closest('[data-nav]');if(nav){state.view=nav.dataset.nav;resetFilters();render();window.scrollTo(0,0);return;}
   const period=e.target.closest('[data-period]');if(period){state.period=period.dataset.period;renderSummary();return;}
   const filter=e.target.closest('[data-filter]');if(filter){state.filter=state.filter===filter.dataset.filter?'all':filter.dataset.filter;$('connectionFilter').value=state.filter;state.page=1;renderSummary();renderTable();return;}
