@@ -131,6 +131,33 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
 }
 @media print{.sidebar,.topbar,.channel-picker,.heading-controls,.table-tools,.pagination,.status-tabs,.page-foot,.skip-link{display:none!important}.shell{padding:0}.page{padding:0}.overview-focus,.stats-grid,.operations-overview{break-inside:avoid}.table-wrap{overflow:visible}body{background:white}}
 
+/* Member summaries stay attached to their visible position rows. */
+.member-list{display:grid;gap:16px;padding:0 22px 22px}.member-list:empty{display:none}
+.member-card{min-width:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fff;break-inside:avoid}
+.member-card-header{display:grid;grid-template-columns:minmax(235px,1.2fr) minmax(140px,1fr) auto;gap:20px;align-items:center;padding:18px 20px;background:#f5f8f6;border-bottom:1px solid var(--line)}
+.member-identity{display:flex;align-items:center;gap:12px;min-width:0}.member-identity>div{min-width:0}.member-card-name{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.member-card-name h3{font-size:15px;font-weight:650;line-height:1.5;overflow-wrap:anywhere}
+.member-card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:6px;font-size:11px;color:var(--muted)}.member-card-meta .pill{font-size:10px;padding:2px 6px}
+.member-field-label{display:block;font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:7px}.member-subscriptions{min-width:0;font-size:12px}.member-subscriptions .subscriptions{gap:5px;max-width:none}.member-subscriptions .subscription{font-size:11px}.member-subscriptions .bell-dot{flex-shrink:0}
+.member-pnl{text-align:right;min-width:155px}.member-pnl-value{display:block;font-size:21px;line-height:1.25;font-weight:650;white-space:nowrap}.member-pnl-value small{font-size:10px;font-weight:400;color:var(--muted);margin-left:5px}.member-exclusion{display:block;color:var(--muted);font-size:10px;margin-top:6px}
+.member-positions-title{font-size:12px;font-weight:550;color:#53675a;padding:13px 20px 0}.member-positions-title span{font-weight:400;color:var(--muted);margin-left:4px}
+.inline-position-list{list-style:none;margin:0;padding:0 20px}.inline-position{display:grid;grid-template-columns:135px minmax(0,1fr);gap:20px;align-items:center;padding:14px 0}.inline-position+.inline-position{border-top:1px solid #edf1ee}
+.inline-position-symbol strong{display:block;font-size:13px;font-weight:650;line-height:1.5}.inline-position-symbol>span{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+.inline-position-data{display:grid;grid-template-columns:.95fr 1.05fr 1.1fr 1.35fr;gap:16px;margin:0;min-width:0}.inline-position-data>div{min-width:0}.inline-position-data dt{font-size:10px;color:var(--muted);margin-bottom:7px;line-height:1.5}.inline-position-data dd{margin:0;font-size:13px;line-height:1.5}.inline-position-data dd.num{font-weight:550;white-space:nowrap}.inline-position-data dd small{display:block;font-size:10px;color:var(--amber);line-height:1.6;margin-top:4px}.inline-position-data .pill{font-size:10px;padding:3px 6px}
+.member-position-empty{padding:16px 20px;color:var(--muted);font-size:12px;line-height:1.7}.member-position-empty strong{font-weight:550;color:#53675a;margin-right:10px}
+@media(max-width:1150px){
+ .member-card-header{grid-template-columns:minmax(0,1fr) auto;gap:14px}.member-subscriptions{grid-column:1/-1;grid-row:2;display:flex;align-items:center;gap:12px}.member-subscriptions .member-field-label{margin:0;flex-shrink:0}
+ .inline-position{grid-template-columns:100px minmax(0,1fr);gap:15px}.inline-position-data{gap:12px}
+}
+@media(max-width:800px){
+ .sidebar .nav-button[data-nav="members"]{font-size:10px}.member-list{padding:0 18px 18px;gap:14px}.member-card-header{padding:16px}.member-identity{gap:9px}.member-card-name h3{font-size:14px}.member-card-name .pill{font-size:10px}.member-pnl{min-width:0}.member-pnl-value{font-size:19px}
+ .member-positions-title{padding:13px 16px 0}.inline-position-list{padding:0 16px}.inline-position{grid-template-columns:1fr;gap:12px;padding:15px 0}.inline-position-symbol{display:flex;align-items:center;justify-content:space-between;gap:12px}.inline-position-symbol>span{margin:0}.inline-position-data{grid-template-columns:repeat(4,minmax(0,1fr))}.member-position-empty{padding:15px 16px}
+}
+@media(max-width:560px){
+ #dataSection>.content-grid>.panel>.panel-heading{align-items:flex-start;flex-wrap:wrap}.member-list{padding:0 12px 14px}.member-card-header{padding:14px;gap:14px 10px}.member-identity{align-items:flex-start}.member-identity .avatar{width:28px;height:28px;font-size:10px}.member-card-name{align-items:flex-start;gap:5px}.member-card-name h3{width:100%}.member-card-meta{font-size:10px;gap:5px}.member-pnl-value{font-size:18px}.member-pnl-value small{display:block;margin:4px 0 0}.member-pnl .member-field-label{font-size:10px}.member-exclusion{max-width:14ch;margin-left:auto;line-height:1.6}
+ .member-subscriptions{align-items:flex-start}.member-subscriptions .subscriptions{gap:5px}.member-subscriptions .subscription{font-size:10px}.inline-position-data{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}.inline-position-data dt{font-size:11px}.inline-position-data dd{font-size:14px}.inline-position-data dd small{font-size:10px}.member-position-empty strong{display:block;margin-bottom:3px}
+ .member-positions-title{padding-left:14px;padding-right:14px}.inline-position-list{padding:0 14px}
+}
+
 </style>
 </head>
 <body>
@@ -194,7 +221,7 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
       <button class="nav-button" data-nav="reports" aria-label="신고 현황"><svg><use href="#i-flag"/></svg><span>신고 현황</span><span class="nav-count" id="navReportCount"></span></button>
       <button class="nav-button" data-nav="sanctions" aria-label="제재 현황"><svg><use href="#i-shield"/></svg><span>제재 현황</span><span class="nav-count" id="navSanctionCount"></span></button>
       <div class="nav-label operations-nav-label">멤버 모니터링</div>
-      <button class="nav-button" data-nav="members" aria-label="멤버 현황"><svg><use href="#i-users"/></svg><span>멤버 현황</span></button>
+      <button class="nav-button" data-nav="members" aria-label="멤버 및 포지션 현황"><svg><use href="#i-users"/></svg><span>멤버·포지션</span></button>
       <button class="nav-button" data-nav="alerts" aria-label="포지션 주의"><svg><use href="#i-alert"/></svg><span>포지션 주의</span><span class="nav-count" id="navAlertCount"></span></button>
       <button class="nav-button" data-nav="info" aria-label="채널 정보"><svg><use href="#i-room"/></svg><span>채널 정보</span></button>
     </nav>
@@ -252,9 +279,9 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
     <div id="dataSection">
       <div class="content-grid">
         <section class="panel" aria-labelledby="membersTitle">
-          <div class="panel-heading"><div><h2 id="membersTitle">멤버 현황 <span id="memberTotal"></span></h2><p id="memberTableDescription">멤버 이름을 선택하면 상세 포지션을 확인할 수 있어요.</p></div><span class="pill gray" id="tableScopeLabel">미실현 PnL 기준</span></div>
+          <div class="panel-heading"><div><h2 id="membersTitle" tabindex="-1">멤버별 포지션 <span id="memberTotal"></span></h2><p id="memberTableDescription">각 멤버 아래에서 보유 포지션과 손익을 바로 확인하세요.</p></div><span class="pill gray" id="tableScopeLabel">미실현 PnL 기준</span></div>
           <div class="table-tools"><label class="search"><svg class="icon"><use href="#i-search"/></svg><span class="sr-only">멤버 검색</span><input id="memberSearch" type="search" placeholder="멤버 닉네임 검색" autocomplete="off"></label><div class="filter-group"><label class="sr-only" for="connectionFilter">연동 상태 필터</label><select id="connectionFilter" class="select"><option value="all">모든 연동 상태</option><option value="disconnected">연동 미완료</option><option value="connected">연동완료</option><option value="pending">거래소 미연동</option><option value="unregistered">EX ID 없음</option></select><label class="sr-only" for="memberSort">멤버 정렬</label><select id="memberSort" class="select"><option value="warning">주의 멤버 우선</option><option value="name">이름순</option><option value="status">연동 상태순</option><option value="pnl-asc">손익 낮은순</option><option value="pnl-desc">손익 높은순</option></select><button class="button" id="resetMemberFilters" hidden>초기화</button></div></div>
-          <div class="table-wrap"><table><caption class="sr-only">멤버별 연동 상태, 구독, 포지션 수, 미실현 손익</caption><thead><tr><th scope="col">멤버</th><th scope="col">연동 상태</th><th scope="col">구독 · 알림</th><th scope="col" class="position-count">포지션</th><th scope="col" style="text-align:right">미실현 PnL <span style="font-size:8px">(USDT)</span></th><th scope="col"><span class="sr-only">상세</span></th></tr></thead><tbody id="memberRows"></tbody></table></div>
+          <div id="memberRows" class="member-list"></div>
           <div id="membersEmpty" class="empty" hidden><svg class="icon"><use href="#i-search"/></svg><h3>조건에 맞는 멤버가 없어요</h3><p>닉네임이나 연동 상태를 바꿔서 다시 검색해 보세요.</p><button class="button" id="clearFilters">검색 조건 초기화</button></div>
           <div class="table-foot"><span id="tableCount" aria-live="polite"></span><nav class="pagination" id="pagination" aria-label="멤버 목록 페이지"></nav></div>
         </section>
@@ -721,10 +748,17 @@ function renderSummary() {
   const colors=['#7caa6e','#d3b574','#c3cbc0'];
   $('connectionStrip').innerHTML=`<button class="connection-button ${state.filter==='all'?'active':''}" data-filter="all" aria-pressed="${state.filter==='all'}">전체<strong>${group.members.length}명</strong></button><div class="connection-meter" aria-hidden="true">${statuses.map((s,i)=>`<span style="width:${group.members.filter(m=>m.status===s).length/group.members.length*100}%;background:${colors[i]}"></span>`).join('')}</div>${statuses.map((s,i)=>`<button class="connection-button ${state.filter===s?'active':''}" data-filter="${s}" aria-pressed="${state.filter===s}"><span class="dot" style="color:${colors[i]}"></span>${statusText[s]}<strong>${group.members.filter(m=>m.status===s).length}명</strong></button>`).join('')}`;
 }
-function memberRow(m) {
-  const name=escapeHTML(m.name),role=m.self?'나 · 방장':m.role==='coadmin'?'부방장':'';
-  const nameHTML=m.self?`<span class="member-name">${name}</span>`:`<button class="member-name" data-member="${m.id}" aria-label="${name} 상세 보기">${name}</button>`;
-  return `<tr class="member-row ${m.self?'self':''}"><td><div class="member-cell"><span class="avatar ${m.warnings.includes('loss')?'warm':m.warnings.includes('counter')?'cool':''}" aria-hidden="true">${name.slice(0,1)}</span><div>${nameHTML}<div class="member-meta">${role?`<span class="pill role">${role}</span>`:m.warnings.length?m.warnings.map(warningBadge).join(''):'일반 멤버'}</div></div></div></td><td>${statusBadge(m.status)}</td><td>${m.self?'<span class="muted">내 계정</span>':subscriptions(m)}</td><td class="position-count num">${m.self?'·':m.status==='connected'?m.positions.length:'·'}</td><td class="pnl-cell num ${m.pnl===null?'muted':m.pnl<0?'negative':'positive'}">${m.self?'집계 제외':m.pnl===null?'확인 전':fmt(m.pnl)}</td><td>${m.self?'':`<button class="icon-button" data-member="${m.id}" aria-label="${name} 포지션 보기" style="width:22px;height:28px">${icon('chevron','row-chevron')}</button>`}</td></tr>`;
+function memberPositionList(m) {
+  if(m.self)return '<p class="member-position-empty">내 계정은 이 목록에서 포지션을 표시하지 않습니다.</p>';
+  if(m.status==='unregistered')return '<p class="member-position-empty"><strong>EX ID 연결 전</strong>YouthMeta EX ID와 거래소를 연결하면 포지션과 손익을 확인할 수 있습니다.</p>';
+  if(m.status==='pending')return '<p class="member-position-empty"><strong>거래소 연동 전</strong>거래소를 연동하면 보유 포지션과 손익을 확인할 수 있습니다.</p>';
+  if(!m.positions.length)return '<p class="member-position-empty"><strong>보유 포지션 없음</strong>현재 열려 있는 포지션이 없습니다.</p>';
+  return `<section class="member-positions" aria-labelledby="positions-${m.id}"><h4 id="positions-${m.id}" class="member-positions-title">보유 포지션 <span>${m.positions.length}개</span></h4><ul class="inline-position-list">${m.positions.map(p=>`<li class="inline-position ${p.counter?'counter':''}"><div class="inline-position-symbol"><strong>${escapeHTML(p.coin)}/USDT</strong><span>${escapeHTML(p.exchange)}</span></div><dl class="inline-position-data"><div><dt>방향 · 레버리지</dt><dd><span class="pill ${p.side==='LONG'?'green':'red'}">${escapeHTML(p.side)} 2x</span></dd></div><div><dt>진입가 <span>(USDT)</span></dt><dd class="num">${p.entry.toLocaleString('en-US',{minimumFractionDigits:2})}</dd></div><div><dt>미실현 손익 <span>(USDT)</span></dt><dd class="num ${p.pnl<0?'negative':'positive'}">${fmt(p.pnl)}</dd></div><div><dt>포지션 경고</dt><dd>${p.counter?'<span class="pill amber">역주문</span><small>활성 Long 시그널과 반대 방향</small>':'<span class="muted">없음</span>'}</dd></div></dl></li>`).join('')}</ul></section>`;
+}
+function memberCard(m) {
+  const name=escapeHTML(m.name),role=m.self?'나 · 방장':m.role==='coadmin'?'부방장':'일반 멤버';
+  const pnl=m.self?'집계 제외':m.pnl===null?'확인 전':fmt(m.pnl);
+  return `<article class="member-card" data-member-id="${m.id}" aria-labelledby="member-${m.id}"><header class="member-card-header"><div class="member-identity"><span class="avatar ${m.warnings.includes('loss')?'warm':m.warnings.includes('counter')?'cool':''}" aria-hidden="true">${name.slice(0,1)}</span><div><div class="member-card-name"><h3 id="member-${m.id}">${name}</h3>${statusBadge(m.status)}</div><div class="member-card-meta"><span>${role}</span>${m.warnings.map(warningBadge).join('')}</div></div></div><div class="member-subscriptions"><span class="member-field-label">구독 · 알림</span>${m.self?'<span class="muted">내 계정</span>':subscriptions(m)}</div><div class="member-pnl"><span class="member-field-label">미실현 손익 합계</span><strong class="member-pnl-value num ${m.pnl===null?'muted':m.pnl<0?'negative':'positive'}">${pnl}${m.pnl===null?'':'<small>USDT</small>'}</strong>${m.role==='coadmin'?'<span class="member-exclusion">그룹 손익 집계·경고 대상 제외</span>':''}</div></header>${memberPositionList(m)}</article>`;
 }
 function filteredMembers() {
   let list=currentGroup().members.slice();
@@ -743,17 +777,17 @@ function filteredMembers() {
     return b.warnings.length-a.warnings.length;
   });return list;
 }
-function renderTable() {
+function renderMembers() {
   const list=filteredMembers(),pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
   state.page=Math.min(state.page,pages);
   const start=(state.page-1)*PAGE_SIZE;
-  $('memberRows').innerHTML=list.slice(start,start+PAGE_SIZE).map(memberRow).join('');
+  $('memberRows').innerHTML=list.slice(start,start+PAGE_SIZE).map(memberCard).join('');
   $('resetMemberFilters').hidden=!state.query&&state.filter==='all'&&state.sort==='warning';
   $('membersEmpty').hidden=list.length>0;
   $('memberTotal').textContent=`${list.length}명`;
   $('tableScopeLabel').textContent=`${currentGroup().name} · 미실현 손익`;
-  $('membersTitle').firstChild.textContent=state.view==='alerts'?'포지션 주의 멤버 ':'멤버 현황 ';
-  $('memberTableDescription').textContent=state.view==='alerts'?'시그널 반대 포지션 또는 손실 경고가 있는 멤버입니다.':'멤버 이름을 선택하면 상세 포지션을 확인할 수 있어요.';
+  $('membersTitle').firstChild.textContent=state.view==='alerts'?'포지션 주의 멤버 ':'멤버별 포지션 ';
+  $('memberTableDescription').textContent=state.view==='alerts'?'경고가 있는 멤버의 보유 포지션을 아래에서 바로 확인하세요.':'각 멤버 아래에서 보유 포지션과 손익을 바로 확인하세요.';
   $('tableCount').textContent=`총 ${list.length}명${list.length?` 중 ${start+1} ~ ${Math.min(start+PAGE_SIZE,list.length)}명`:''}`;
   $('pagination').innerHTML=`<button data-page="${state.page-1}" aria-label="이전 페이지" ${state.page===1?'disabled':''}>${icon('back')}</button>${Array.from({length:pages},(_,i)=>`<button data-page="${i+1}" ${i+1===state.page?'class="active" aria-current="page"':''} aria-label="${i+1}페이지">${i+1}</button>`).join('')}<button data-page="${state.page+1}" aria-label="다음 페이지" ${state.page===pages?'disabled':''}>${icon('chevron')}</button>`;
 }
@@ -765,7 +799,7 @@ function renderInfo() {
   $('infoSection').innerHTML=`<div class="info-grid"><article class="panel"><div class="panel-heading"><h2>그룹 기본 정보</h2><span class="pill gray">${icon('eye')}조회 전용</span></div><div class="info-body"><h3 class="info-title">${g.name}</h3><p class="group-description">${g.intro}</p><dl><div class="info-row"><dt>방장</dt><dd>서준 팀장 <span class="pill role">나</span></dd></div><div class="info-row"><dt>부방장</dt><dd>하린</dd></div><div class="info-row"><dt>전체 멤버</dt><dd>${g.members.length}명</dd></div><div class="info-row"><dt>그룹 개설일</dt><dd>${g.created}</dd></div><div class="info-row"><dt>기본 시드 한도</dt><dd>${g.seed}</dd></div></dl><p class="info-copy">기본 시드 한도는 새로 공유하는 Trade idea의 빠른 주문 한도에 적용됩니다. 이미 공유한 Trade idea의 한도는 바뀌지 않습니다.</p></div></article><article class="panel"><div class="panel-heading"><h2>내 조회 권한</h2>${icon('lock')}</div><div class="info-body"><div class="info-row"><dt>계정</dt><dd>viewer@example.com</dd></div><div class="info-row"><dt>웹 권한</dt><dd><span class="pill green">뷰어</span></dd></div><div class="info-row"><dt>조회 가능한 그룹</dt><dd>문샷 서클<br>알파 스쿼드</dd></div><ul class="info-list"><li>${icon('check')}그룹 손익과 연동 현황 확인</li><li>${icon('check')}멤버별 구독·알림 상태 확인</li><li>${icon('check')}멤버의 현재 포지션·PnL 조회</li><li>${icon('check')}신고·제재 기록 조회 (검토안)</li></ul><p class="info-copy">그룹 설정, 멤버 관리, 채팅 전송 기능은 제공하지 않습니다. 실제 계정의 권한과 조회 범위는 별도 협의가 필요합니다.</p></div></article></div>`;
 }
 function render() {
-  const titles={overview:['운영 대시보드','선택한 채널의 손익과 운영 현황을 한눈에 확인하세요.','대시보드'],members:['멤버 현황','연동 상태와 구독, 현재 포지션을 멤버별로 살펴보세요.','멤버 현황'],alerts:['포지션 주의','역주문·손실 경고가 있는 멤버와 현재 포지션을 확인하세요.','포지션 주의'],reports:['신고 현황','선택한 채널의 신고 사유와 처리 경과를 조회합니다.','신고 현황'],sanctions:['제재 현황','선택한 채널과 관련된 제재의 적용 범위와 이력을 확인합니다.','제재 현황'],info:['채널 정보','채널의 기본 정보와 내 조회 권한을 확인하세요.','채널 정보']};
+  const titles={overview:['운영 대시보드','선택한 채널의 손익과 운영 현황을 한눈에 확인하세요.','대시보드'],members:['멤버 및 포지션 현황','멤버의 연동 상태부터 보유 포지션과 손익까지 한눈에 확인하세요.','멤버 및 포지션 현황'],alerts:['포지션 주의','역주문·손실 경고가 있는 멤버와 현재 포지션을 확인하세요.','포지션 주의'],reports:['신고 현황','선택한 채널의 신고 사유와 처리 경과를 조회합니다.','신고 현황'],sanctions:['제재 현황','선택한 채널과 관련된 제재의 적용 범위와 이력을 확인합니다.','제재 현황'],info:['채널 정보','채널의 기본 정보와 내 조회 권한을 확인하세요.','채널 정보']};
   const title=titles[state.view];
   $('pageTitle').textContent=title[0];$('pageDescription').textContent=title[1];$('breadcrumbCurrent').textContent=title[2];
   document.querySelectorAll('[data-nav]').forEach(b=>{const active=b.dataset.nav===state.view;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
@@ -778,7 +812,7 @@ function render() {
   $('infoSection').hidden=state.view!=='info';
   $('main').classList.add('full-table');
   document.title=`${title[0]} · ${currentGroup().name} | Supercycl`;
-  renderSummary();renderTable();renderAttention();renderOperationsOverview();if(state.view==='info')renderInfo();if(isModeration())renderModeration();
+  renderSummary();renderMembers();renderAttention();renderOperationsOverview();if(state.view==='info')renderInfo();if(isModeration())renderModeration();
 }
 function openMember(id) {
   if(!state.loggedIn)return;
@@ -814,9 +848,9 @@ $('logoutButton').addEventListener('click',()=>{
   state.loggedIn=false;document.querySelectorAll('dialog[open]').forEach(d=>d.close());$('app').hidden=true;$('loginScreen').hidden=false;$('toast').hidden=true;
   document.title='Supercycl | 커뮤니티 뷰어 목업';$('demoPassword').type='password';$('passwordToggle').setAttribute('aria-pressed','false');$('passwordToggle').setAttribute('aria-label','시연용 비밀번호 표시');$('loginForm').querySelector('[type="submit"]').focus();window.scrollTo(0,0);
 });
-$('memberSearch').addEventListener('input',e=>{state.query=e.target.value;state.page=1;renderTable();});
-$('connectionFilter').addEventListener('change',e=>{state.filter=e.target.value;state.page=1;renderSummary();renderTable();});
-$('memberSort').addEventListener('change',e=>{state.sort=e.target.value;state.page=1;renderTable();});
+$('memberSearch').addEventListener('input',e=>{state.query=e.target.value;state.page=1;renderMembers();});
+$('connectionFilter').addEventListener('change',e=>{state.filter=e.target.value;state.page=1;renderSummary();renderMembers();});
+$('memberSort').addEventListener('change',e=>{state.sort=e.target.value;state.page=1;renderMembers();});
 $('clearFilters').addEventListener('click',()=>{resetFilters();render();$('memberSearch').focus();});
 $('refreshButton').addEventListener('click',()=>{render();showToast('시연 데이터를 다시 표시했어요. 실제 서버와 연결되지 않은 목업입니다.');});
 $('moderationSearch').addEventListener('input',e=>{moderationFilter.query=e.target.value;moderationFilter.page=1;renderModeration();});
@@ -837,7 +871,7 @@ document.addEventListener('click',e=>{
   const nav=e.target.closest('[data-nav]');if(nav){state.view=nav.dataset.nav;resetFilters();render();window.scrollTo(0,0);return;}
   const period=e.target.closest('[data-period]');if(period){state.period=period.dataset.period;renderSummary();return;}
   const filter=e.target.closest('[data-filter]');if(filter){if(state.view==='overview'){state.view='members';resetFilters();}state.filter=state.filter===filter.dataset.filter?'all':filter.dataset.filter;$('connectionFilter').value=state.filter;state.page=1;render();return;}
-  const page=e.target.closest('[data-page]');if(page&&!page.disabled){state.page=Number(page.dataset.page);renderTable();return;}
+  const page=e.target.closest('[data-page]');if(page&&!page.disabled){state.page=Number(page.dataset.page);renderMembers();$('dataSection').scrollIntoView({block:'start'});$('membersTitle').focus({preventScroll:true});return;}
   const member=e.target.closest('[data-member]');if(member)openMember(member.dataset.member);
 });
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
