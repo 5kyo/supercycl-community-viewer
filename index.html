@@ -134,10 +134,11 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
 /* Member summaries stay attached to their visible position rows. */
 .member-list{display:grid;gap:16px;padding:0 22px 22px}.member-list:empty{display:none}
 .member-card{min-width:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fff;break-inside:avoid;scroll-margin-top:16px}.member-card:focus{outline:none}.member-card.is-target{outline:2px solid var(--green);outline-offset:2px}
-.member-card-header{display:grid;grid-template-columns:minmax(235px,1.2fr) minmax(140px,1fr) auto;gap:20px;align-items:center;padding:18px 20px;background:#f5f8f6;border-bottom:1px solid var(--line)}
+.member-card-header{display:grid;grid-template-columns:minmax(210px,1.1fr) auto minmax(140px,1fr) auto;gap:20px;align-items:center;padding:18px 20px;background:#f5f8f6;border-bottom:1px solid var(--line)}
 .member-identity{display:flex;align-items:center;gap:12px;min-width:0}.member-identity>div{min-width:0}.member-card-name{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.member-card-name h3{font-size:15px;font-weight:650;line-height:1.5;overflow-wrap:anywhere}
 .member-card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:6px;font-size:11px;color:var(--muted)}.member-card-meta .pill{font-size:10px;padding:2px 6px}
 .member-field-label{display:block;font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:7px}.member-subscriptions{min-width:0;font-size:12px}.member-subscriptions .subscriptions{gap:5px;max-width:none}.member-subscriptions .subscription{font-size:11px}.alert-state{display:inline-flex;align-items:center;gap:3px;margin-left:4px;font-size:11px;color:var(--green);white-space:nowrap}.alert-state .icon{width:13px;height:13px}.alert-state.off{color:var(--muted)}.subscription-empty{font-size:11px;color:var(--muted)}
+.member-exchanges{min-width:0}.exchange-count{margin-left:3px;color:#4b684e;font-weight:600}.exchange-links{display:flex;flex-wrap:wrap;gap:5px;list-style:none;margin:0;padding:0}.exchange-chip{display:inline-flex;align-items:center;gap:3px;padding:3px 7px;border:1px dashed #cfd6d1;border-radius:6px;background:#fff;color:var(--muted);font-size:11px;font-weight:550;line-height:1.3;white-space:nowrap}.exchange-chip .icon{width:12px;height:12px}.exchange-chip.on{border-style:solid;font-weight:650}.exchange-chip.okx.on{background:#1e2926;border-color:#1e2926;color:#fff}.exchange-chip.bingx.on{background:#e9eeff;border-color:#9fb2f5;color:#2343b8}.exchange-chip.binance.on{background:#fdf3d3;border-color:#e6c25a;color:#6e5100}
 .member-pnl{text-align:right;min-width:155px}.member-pnl-value{display:block;font-size:21px;line-height:1.25;font-weight:650;white-space:nowrap}.member-pnl-value small{font-size:10px;font-weight:400;color:var(--muted);margin-left:5px}.member-pnl-value.is-note{font-size:14px;font-weight:550;color:var(--muted)}.member-exclusion{display:block;color:var(--muted);font-size:11px;margin-top:6px}
 .member-positions-title{font-size:12px;font-weight:550;color:#53675a;padding:13px 20px 0}.member-positions-title span{font-weight:400;color:var(--muted);margin-left:4px}
 .inline-position-head{display:grid;grid-template-columns:135px minmax(0,1fr);gap:20px;margin:10px 20px 0;padding-bottom:9px;border-bottom:1px solid #edf1ee;font-size:11px;color:var(--muted);line-height:1.5}.inline-position-head>div{display:grid;grid-template-columns:.95fr 1.05fr 1.1fr 1.35fr;gap:16px}
@@ -147,7 +148,7 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
 .inline-position-data{display:grid;grid-template-columns:.95fr 1.05fr 1.1fr 1.35fr;gap:16px;margin:0;min-width:0}.inline-position-data>div{min-width:0}.inline-position-data dt{font-size:11px;color:var(--muted);margin-bottom:7px;line-height:1.5}.inline-position-data dd{margin:0;font-size:13px;line-height:1.5}.inline-position-data dd.num{font-weight:550;white-space:nowrap}.inline-position-data dd small{display:block;font-size:10px;color:var(--amber);line-height:1.6;margin-top:4px}.inline-position-data .pill{font-size:10px;padding:3px 6px}
 .member-position-empty{padding:16px 20px;color:var(--muted);font-size:12px;line-height:1.7}.member-position-empty strong{font-weight:550;color:#53675a;margin-right:10px}
 @media(max-width:1150px){
- .member-card-header{grid-template-columns:minmax(0,1fr) auto;gap:14px}.member-subscriptions{grid-column:1/-1;grid-row:2;display:flex;align-items:center;gap:12px}.member-subscriptions .member-field-label{margin:0;flex-shrink:0}
+ .member-card-header{grid-template-columns:minmax(0,1fr) auto;gap:14px}.member-exchanges,.member-subscriptions{grid-column:1/-1;display:flex;align-items:center;gap:12px}.member-exchanges{grid-row:2}.member-subscriptions{grid-row:3}.member-exchanges .member-field-label,.member-subscriptions .member-field-label{margin:0;flex-shrink:0;min-width:76px}
  .inline-position,.inline-position-head{grid-template-columns:100px minmax(0,1fr);gap:15px}.inline-position-data,.inline-position-head>div{gap:12px}
 }
 @media(max-width:800px){
@@ -156,7 +157,7 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
 }
 @media(max-width:560px){
  #dataSection>.content-grid>.panel>.panel-heading{align-items:flex-start;flex-wrap:wrap}.member-list{padding:0 12px 14px}.member-card-header{padding:14px;gap:14px 10px}.member-identity{align-items:flex-start}.member-identity .avatar{width:28px;height:28px;font-size:10px}.member-card-name{align-items:flex-start;gap:5px}.member-card-name h3{width:100%}.member-card-meta{font-size:10px;gap:5px}.member-pnl-value{font-size:18px}.member-pnl-value small{display:block;margin:4px 0 0}.member-pnl .member-field-label{font-size:10px}.member-exclusion{max-width:14ch;margin-left:auto;line-height:1.6}
- .member-subscriptions{align-items:flex-start}.member-subscriptions .subscriptions{gap:5px}.member-subscriptions .subscription{font-size:10px}.inline-position-data{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}.inline-position-data dt{font-size:11px}.inline-position-data dd{font-size:14px}.inline-position-data dd small{font-size:10px}.member-position-empty strong{display:block;margin-bottom:3px}
+ .member-exchanges,.member-subscriptions{align-items:flex-start}.member-subscriptions .subscriptions{gap:5px}.member-subscriptions .subscription{font-size:10px}.inline-position-data{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}.inline-position-data dt{font-size:11px}.inline-position-data dd{font-size:14px}.inline-position-data dd small{font-size:10px}.member-position-empty strong{display:block;margin-bottom:3px}
  .member-positions-title{padding-left:14px;padding-right:14px}.inline-position-list{padding:0 14px}
 }
 
@@ -331,6 +332,8 @@ const state = {loggedIn:false,room:'moon',view:'overview',period:'today',query:'
 const PAGE_SIZE = 7;
 const periodLabels = {today:'오늘 · 10.21 00:00 ~ 14:32 KST', '7d':'최근 7일 · 10.15 ~ 10.21 KST','30d':'최근 30일 · 09.22 ~ 10.21 KST',all:'그룹 개설 이후 · 09.01 ~ 10.21 KST'};
 const names = ['서준 팀장','하린','지후','서연','민준','도윤','유나','시우','하은','예린','건우','민서','지안','준서','채원','은우','수아','태오','나래','유진','지민','바다','서우','이안'];
+const exchanges = [{id:'okx',label:'OKX'},{id:'bingx',label:'BingX'},{id:'binance',label:'Binance'}];
+const exchangeSets = [['okx'],['okx','binance'],['bingx'],['okx','bingx','binance'],['binance'],['bingx','binance']];
 const subscriptionSets = [['Premium','Smart','Blinker','NEXT'],['Premium','NEXT'],['Blinker'],['Smart','NEXT'],['Premium'],[]];
 function makeMembers(room, count) {
   return Array.from({length:count},(_,i) => {
@@ -340,17 +343,18 @@ function makeMembers(room, count) {
     const pnls = [-21040,38650,12840,-47820,7630,19540,-5480,26870,0,9140,-1260,0,25380,-1630,21740,6710,0,9540];
     const pnl = i===0?null:i===1?15680:status==='connected'?pnls[(i-2+offset)%pnls.length]:null;
     const warnings = role==='member'&&status==='connected'?(i===2?['counter']:i===5?['loss']:i===8?['counter']:[]):[];
+    const linked = status==='connected'?exchangeSets[(i+offset)%exchangeSets.length]:[];
     const positionCount = pnl===null||pnl===0?0:1+(i%3);
     const positions = Array.from({length:positionCount},(_,j)=>{
       const coins = ['BTC','ETH','SOL'];
       const entries = [68180,2642.3,153.42];
       const part = j===positionCount-1?pnl-Math.trunc(pnl/positionCount)*(positionCount-1):Math.trunc(pnl/positionCount);
-      return {coin:coins[j],side:warnings.includes('counter')&&j===0?'SHORT':'LONG',entry:entries[j],pnl:part,exchange:'OKX',counter:warnings.includes('counter')&&j===0};
+      return {coin:coins[j],side:warnings.includes('counter')&&j===0?'SHORT':'LONG',entry:entries[j],pnl:part,exchange:exchanges.find(e=>e.id===linked[j%linked.length]).label,counter:warnings.includes('counter')&&j===0};
     });
     const rBase = [16250,26740,8950,-18360,5420,14250,-3170,19860,0,6240,-860,0,17530,-940,13820,4750,0,6410];
     const today = role==='member'&&status==='connected'?rBase[(i-2+offset)%rBase.length]:0;
     const r = {today,'7d':today*5+(today===0?0:(i%2?5310:-2470)),'30d':today*17+(today===0?0:(i%2?10570:-8140)),all:today*28+(today===0?0:(i%2?25320:-14750))};
-    return {id:`${room}-${i}`,name:names[i],status,role,self:i===0,subscriptions:status==='unregistered'?[]:subscriptionSets[(i+offset)%6],alerts:status!=='unregistered'&&i%3!==1,pnl,positions,warnings,realized:r};
+    return {id:`${room}-${i}`,name:names[i],status,role,self:i===0,exchanges:linked,subscriptions:status==='unregistered'?[]:subscriptionSets[(i+offset)%6],alerts:status!=='unregistered'&&i%3!==1,pnl,positions,warnings,realized:r};
   });
 }
 const groups = {
@@ -707,6 +711,9 @@ function statusBadge(status) {
   return `<span class="pill ${status==='connected'?'green':status==='pending'?'amber':'gray'}"><span class="dot"></span>${statusText[status]}</span>`;
 }
 function warningBadge(type) {return `<span class="pill ${type==='counter'?'amber':'red'}">${type==='counter'?'역주문':'손실'}</span>`;}
+function exchangeLinks(m) {
+  return `<ul class="exchange-links">${exchanges.map(e=>{const on=m.exchanges.includes(e.id);return `<li class="exchange-chip ${e.id} ${on?'on':''}">${on?icon('check'):''}${e.label}<span class="sr-only"> ${on?'연동됨':'미연동'}</span></li>`;}).join('')}</ul>`;
+}
 function subscriptions(m) {
   if(m.status==='unregistered') return '<span class="muted">확인 전</span>';
   return `<div class="subscriptions">${m.subscriptions.map(s=>`<span class="subscription">${s}</span>`).join('')}${m.subscriptions.length?'':'<span class="subscription-empty">구독 없음</span>'}<span class="alert-state ${m.alerts?'':'off'}">${icon('bell')}알림 ${m.alerts?'켜짐':'꺼짐'}</span></div>`;
@@ -765,7 +772,7 @@ function memberPositionList(m) {
 function memberCard(m) {
   const name=escapeHTML(m.name),role=m.self?'나 · 방장':m.role==='coadmin'?'부방장':'일반 멤버';
   const pnl=m.self?'집계 제외':m.pnl===null?'확인 전':fmt(m.pnl);
-  return `<article class="member-card" data-member-id="${m.id}" aria-labelledby="member-${m.id}" tabindex="-1"><header class="member-card-header"><div class="member-identity"><span class="avatar ${m.warnings.includes('loss')?'warm':m.warnings.includes('counter')?'cool':''}" aria-hidden="true">${name.slice(0,1)}</span><div><div class="member-card-name"><h3 id="member-${m.id}">${name}</h3>${statusBadge(m.status)}</div><div class="member-card-meta"><span>${role}</span>${m.warnings.map(warningBadge).join('')}</div></div></div><div class="member-subscriptions"><span class="member-field-label">구독 · 알림</span>${m.self?'<span class="muted">내 계정</span>':subscriptions(m)}</div><div class="member-pnl"><span class="member-field-label">미실현 손익 합계</span><strong class="member-pnl-value num ${m.pnl===null?'is-note':m.pnl<0?'negative':'positive'}">${pnl}${m.pnl===null?'':'<small>USDT</small>'}</strong>${m.role==='coadmin'?'<span class="member-exclusion">그룹 손익 집계·경고 대상 제외</span>':''}</div></header>${memberPositionList(m)}</article>`;
+  return `<article class="member-card" data-member-id="${m.id}" aria-labelledby="member-${m.id}" tabindex="-1"><header class="member-card-header"><div class="member-identity"><span class="avatar ${m.warnings.includes('loss')?'warm':m.warnings.includes('counter')?'cool':''}" aria-hidden="true">${name.slice(0,1)}</span><div><div class="member-card-name"><h3 id="member-${m.id}">${name}</h3>${statusBadge(m.status)}</div><div class="member-card-meta"><span>${role}</span>${m.warnings.map(warningBadge).join('')}</div></div></div><div class="member-exchanges"><span class="member-field-label">연동 거래소 <span class="exchange-count">${m.exchanges.length}/${exchanges.length}</span></span>${exchangeLinks(m)}</div><div class="member-subscriptions"><span class="member-field-label">구독 · 알림</span>${m.self?'<span class="muted">내 계정</span>':subscriptions(m)}</div><div class="member-pnl"><span class="member-field-label">미실현 손익 합계</span><strong class="member-pnl-value num ${m.pnl===null?'is-note':m.pnl<0?'negative':'positive'}">${pnl}${m.pnl===null?'':'<small>USDT</small>'}</strong>${m.role==='coadmin'?'<span class="member-exclusion">그룹 손익 집계·경고 대상 제외</span>':''}</div></header>${memberPositionList(m)}</article>`;
 }
 function filteredMembers() {
   let list=currentGroup().members.slice();
