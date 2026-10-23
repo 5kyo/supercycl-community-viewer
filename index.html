@@ -195,18 +195,12 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
 @media(max-width:800px){.channel-options{grid-template-columns:1fr 1fr}.exchange-strip{padding:13px 15px;gap:10px 16px}.exchange-strip-label{width:100%}.exchange-multi{margin-left:0}}
 @media(max-width:560px){.channel-row{padding:11px 12px;gap:10px}}
 
-/* Web3Auth sign-in options (same providers as mobile) and desktop QR login. */
+/* Web3Auth sign-in options (same providers as mobile). */
 .login-options{display:grid;gap:10px}
 .login-option{display:flex;align-items:center;gap:12px;width:100%;min-height:50px;padding:0 16px;border:1px solid #d5ddd6;border-radius:9px;background:#fff;font-size:14px;font-weight:600;color:var(--ink);text-align:left}
 .login-option:hover:not(:disabled){border-color:var(--green);background:#f5f9f2}.login-option:disabled{opacity:.55;cursor:progress}
-.login-option small{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-top:2px}
 .login-option-icon{display:grid;place-items:center;width:28px;height:28px;flex-shrink:0;border-radius:7px;background:#eef3ec;color:#3e5c46}.login-option-icon .icon{width:16px;height:16px}
 .login-google{font-size:14px;font-weight:700;background:#fff;border:1px solid #dfe5df;color:#3b4a40}
-.login-divider{display:flex;align-items:center;gap:10px;margin:4px 0;font-size:11px;color:var(--muted)}.login-divider:before,.login-divider:after{content:"";flex:1;height:1px;background:var(--line)}
-.login-qr{display:grid;justify-items:center;gap:14px}
-.login-qr-code{width:176px;height:176px;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fff}.login-qr-code svg{display:block;width:100%;height:100%}
-.login-qr-steps{justify-self:stretch;margin:0;padding-left:18px;font-size:12px;line-height:1.8;color:#53675a}
-.login-qr .login-submit{margin-top:2px}.login-back{font-size:12px;color:var(--green)}
 .login-status{margin-top:14px;font-size:12px;color:var(--green)}
 </style>
 </head>
@@ -226,7 +220,7 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
 <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
 <symbol id="i-activity" viewBox="0 0 24 24"><path d="M2 12h5l3-8 4 16 3-8h5"/></symbol>
 <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-5 4 3 6-8"/></symbol>
-<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol><symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v.01M14 21h3M21 18v3h-1"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
 <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V3m0 1c4-3 9 3 14 0v10c-5 3-10-3-14 0"/></symbol>
 <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="M8 12h8"/></symbol>
 <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
@@ -255,14 +249,6 @@ table{font-size:13px;min-width:720px}th{font-size:12px;height:43px;background:#f
       <div class="login-options" id="loginOptions">
         <button type="button" class="login-option" data-login="email" aria-describedby="loginNotice"><span class="login-option-icon"><svg class="icon"><use href="#i-mail"/></svg></span><span>이메일로 계속하기</span></button>
         <button type="button" class="login-option" data-login="google" aria-describedby="loginNotice"><span class="login-option-icon login-google" aria-hidden="true">G</span><span>Google로 계속하기</span></button>
-        <div class="login-divider"><span>또는</span></div>
-        <button type="button" class="login-option" data-login="qr"><span class="login-option-icon"><svg class="icon"><use href="#i-qr"/></svg></span><span>QR 코드로 로그인<small>Supercycl 앱으로 스캔</small></span></button>
-      </div>
-      <div class="login-qr" id="loginQr" hidden>
-        <div class="login-qr-code" id="loginQrCode" aria-hidden="true"></div>
-        <ol class="login-qr-steps"><li>휴대폰에서 Supercycl 앱을 엽니다.</li><li>로그인 화면의 <strong>Scan QR Code</strong>를 누릅니다.</li><li>이 QR 코드를 스캔하면 앱의 로그인 계정으로 입장합니다.</li></ol>
-        <button type="button" class="login-submit" data-login="qr-scanned">스캔 완료로 입장하기 (시연)</button>
-        <button type="button" class="text-button login-back" id="loginBack">다른 방법으로 로그인</button>
       </div>
       <p class="login-status" id="loginStatus" role="status" hidden></p>
       <div class="demo-note" id="loginNotice"><strong>Web3Auth 로그인 시연입니다.</strong>모바일 앱과 같은 Web3Auth 로그인(이메일 인증 코드·Google)을 사용하며 별도 뷰어 계정이나 비밀번호는 만들지 않습니다. 시연에서는 실제 인증 창을 열지 않고 가상 계정으로 바로 입장합니다.</div>
@@ -375,7 +361,7 @@ const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;'
 const fmt = cents => (cents < 0 ? '-' : '+') + (Math.abs(cents)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
 const money = cents => (cents/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
 const statusText = {connected:'연동완료',pending:'거래소 미연동',unregistered:'EX ID 없음'};
-const loginMethods = {email:'이메일 인증 코드',google:'Google',qr:'QR 코드 (앱 계정 연결)'};
+const loginMethods = {email:'이메일 인증 코드',google:'Google'};
 const state = {loggedIn:false,loginMethod:'google',room:'moon',view:'overview',period:'today',query:'',filter:'all',exchange:'all',sort:'warning',page:1,channelSlots:[]};
 const PAGE_SIZE = 7;
 const periodLabels = {today:'오늘 · 10.21 00:00 ~ 14:32 KST', '7d':'최근 7일 · 10.15 ~ 10.21 KST','30d':'최근 30일 · 09.22 ~ 10.21 KST',all:'그룹 개설 이후 · 09.01 ~ 10.21 KST'};
@@ -1003,34 +989,24 @@ function resetFilters() {
   $('memberSearch').value='';$('connectionFilter').value='all';$('exchangeFilter').value='all';$('memberSort').value='warning';
 }
 function enterApp(method) {
-  state.loginMethod=method;$('profileMethod').textContent=`방장 · ${method==='qr'?'QR 로그인':method==='google'?'Google':'이메일'}`;
+  state.loginMethod=method;$('profileMethod').textContent=`방장 · ${method==='google'?'Google':'이메일'}`;
   state.loggedIn=true;state.room='moon';state.channelSlots=[];state.view='overview';state.period='today';resetFilters();
   $('loginScreen').hidden=true;$('app').hidden=false;render();window.scrollTo(0,0);$('main').focus({preventScroll:true});
 }
 function showLoginOptions() {
-  $('loginQr').hidden=true;$('loginOptions').hidden=false;$('loginStatus').hidden=true;
+  $('loginStatus').hidden=true;
   document.querySelectorAll('[data-login]').forEach(b=>b.disabled=false);
-}
-function drawLoginQr() {
-  // Decorative sample QR pattern; not a scannable code.
-  const n=25,rand=mulberry32(2026),finder=(x,y)=>[[0,0],[n-7,0],[0,n-7]].some(([fx,fy])=>x>=fx&&x<fx+7&&y>=fy&&y<fy+7);
-  const ring=(x,y)=>[[0,0],[n-7,0],[0,n-7]].some(([fx,fy])=>{const dx=x-fx,dy=y-fy;return dx>=0&&dx<7&&dy>=0&&dy<7&&(dx===0||dx===6||dy===0||dy===6||(dx>=2&&dx<=4&&dy>=2&&dy<=4));});
-  let cells='';
-  for(let y=0;y<n;y++)for(let x=0;x<n;x++)if(finder(x,y)?ring(x,y):rand()<.48)cells+=`<rect x="${x}" y="${y}" width="1" height="1"/>`;
-  $('loginQrCode').innerHTML=`<svg viewBox="-2 -2 ${n+4} ${n+4}" shape-rendering="crispEdges"><rect x="-2" y="-2" width="${n+4}" height="${n+4}" fill="#fff"/><g fill="#17261e">${cells}</g></svg>`;
 }
 $('loginForm').addEventListener('click',e=>{
   const button=e.target.closest('[data-login]');
   if(!button||button.disabled)return;
   const method=button.dataset.login;
-  if(method==='qr'){$('loginOptions').hidden=true;$('loginQr').hidden=false;$('loginQr').querySelector('.login-submit').focus();return;}
-  const label={email:'Web3Auth 이메일 인증 화면으로 연결하는 중입니다…',google:'Web3Auth Google 로그인 화면으로 연결하는 중입니다…','qr-scanned':'앱 계정과 연결하는 중입니다…'}[method];
+  const label={email:'Web3Auth 이메일 인증 화면으로 연결하는 중입니다…',google:'Web3Auth Google 로그인 화면으로 연결하는 중입니다…'}[method];
   document.querySelectorAll('[data-login]').forEach(b=>b.disabled=true);
   $('loginStatus').textContent=label;$('loginStatus').hidden=false;
-  setTimeout(()=>{showLoginOptions();enterApp(method==='qr-scanned'?'qr':method);},650);
+  setTimeout(()=>{showLoginOptions();enterApp(method);},650);
 });
-$('loginBack').addEventListener('click',()=>{showLoginOptions();$('loginOptions').querySelector('[data-login="qr"]').focus();});
-drawLoginQr();
+
 $('logoutButton').addEventListener('click',()=>{
   state.loggedIn=false;document.querySelectorAll('dialog[open]').forEach(d=>d.close());$('app').hidden=true;$('loginScreen').hidden=false;$('toast').hidden=true;
   document.title='Supercycl | 커뮤니티 뷰어 목업';showLoginOptions();$('loginOptions').querySelector('[data-login]').focus();window.scrollTo(0,0);
